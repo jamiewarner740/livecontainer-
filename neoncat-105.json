@@ -1,0 +1,26 @@
+{
+  "name": "Neoncat 105",
+  "identifier": "com.jamiewarner.neoncat.105",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-105.json",
+  "apps": [
+    {
+      "name": "InstaNyxBH",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "314.0.6-1.1.8",
+      "versionDate": "2024-10-06",
+      "size": 140686746,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaNyxBH/InstaNyxBH-314.0.6-1.1.8.ipa",
+      "developerName": "Manpreet Singh @thisismanpreets",
+      "localizedDescription": "Not cracked. Injected with both Nyx and BH. A user requested it so here it is.\nLast updated: 04-16-2024\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "314.0.6-1.1.8",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaNyxBH/InstaNyxBH-314.0.6-1.1.8.ipa",
+          "size": 140686746
+        }
+      ]
+    }
+  ]
+}

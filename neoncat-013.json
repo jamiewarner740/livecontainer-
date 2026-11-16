@@ -1,0 +1,957 @@
+{
+  "name": "Neoncat 013",
+  "identifier": "com.jamiewarner.neoncat.013",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-013.json",
+  "apps": [
+    {
+      "name": "iPoGo",
+      "bundleIdentifier": "com.nianticlabs.pokemongo",
+      "version": "3.2.9",
+      "versionDate": "2024-10-17",
+      "size": 135869447,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iPoGo/iPoGo-3.2.9.ipa",
+      "developerName": "ipogo",
+      "localizedDescription": "Pokemon GO with a bunch of cheats, including joystick-to-walk, increased catch accuracy, sniping, teleporting, etc. USE RESPONSIBLY, OVERUSE CAN GET YOU BANNED.\nLast updated: 08-15-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.nianticlabs.pokemongo.png",
+      "versions": [
+        {
+          "version": "3.2.9",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iPoGo/iPoGo-3.2.9.ipa",
+          "size": 135869447
+        }
+      ]
+    },
+    {
+      "name": "Watusi3",
+      "bundleIdentifier": "net.whatsapp.WhatsApp",
+      "version": "23.14.79",
+      "versionDate": "2024-10-15",
+      "size": 81350176,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Watusi3/Watusi3-23.14.79.ipa",
+      "developerName": "CyPwn IPA Library / DPixel / MeemNon / zxcvbn’s tweaked IPAs / FouadRaheb",
+      "localizedDescription": "WhatsApp, injected with Watusi v1.2.36, Stalky v4.1.27, OnlineNotify v3.4.4. Notifications and iCloud backups work with TrollStore.\nLast updated: 07-03-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/net.whatsapp.WhatsApp.png",
+      "versions": [
+        {
+          "version": "23.14.79",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Watusi3/Watusi3-23.14.79.ipa",
+          "size": 81350176
+        }
+      ]
+    },
+    {
+      "name": "VSCOPremium",
+      "bundleIdentifier": "co.visualsupply.cam",
+      "version": "377.0.0",
+      "versionDate": "2024-10-15",
+      "size": 121917984,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/VSCOPremium/VSCOPremium-377.0.0.ipa",
+      "developerName": "IPA Fire / binnichtaktiv's iPA Library / Manpreet Singh @thisismanpreets",
+      "localizedDescription": "VSCO with premium features unlocked. Note: Install through TrollStore then reinstall via the AppStore or install it from the App Store then proceed to force install the TrollStore version. This process (might) keep the tweak working and should resolve any download problems.\nLast updated: 07-30-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/co.visualsupply.cam.png",
+      "versions": [
+        {
+          "version": "377.0.0",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/VSCOPremium/VSCOPremium-377.0.0.ipa",
+          "size": 121917984
+        }
+      ]
+    },
+    {
+      "name": "TwitchPlus",
+      "bundleIdentifier": "tv.twitch",
+      "version": "15.5",
+      "versionDate": "2024-10-15",
+      "size": 78060639,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TwitchPlus/TwitchPlus-15.5.ipa",
+      "developerName": "AppDB / DPixel / zxcvbn's tweaked IPAs / level3tjg / Ed0.ipa / ArianaMinajj",
+      "localizedDescription": "Alternative to Twitch Toolbox, Twitch with no ads.\nLast updated: 08-13-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/tv.twitch.png",
+      "versions": [
+        {
+          "version": "15.5",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TwitchPlus/TwitchPlus-15.5.ipa",
+          "size": 78060639
+        }
+      ]
+    },
+    {
+      "name": "TrollRecorder",
+      "bundleIdentifier": "wiki.qaq.trapp",
+      "version": "1.3.2-20",
+      "versionDate": "2024-10-14",
+      "size": 2525367,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollRecorder/TrollRecorder-1.3.2-20.ipa",
+      "developerName": "Lessica / TrollRecorder",
+      "localizedDescription": "Advanced audio recorder with TrollStore. Basic features are available at no cost, advanced features can be unlocked with the purchase of a 5€ license.\nLast updated: 07-25-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/wiki.qaq.trapp.png",
+      "versions": [
+        {
+          "version": "1.3.2-20",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollRecorder/TrollRecorder-1.3.2-20.ipa",
+          "size": 2525367
+        }
+      ]
+    },
+    {
+      "name": "TorBrowserPlusPlus",
+      "bundleIdentifier": "ch.b-eng.tor",
+      "version": "3.5.5",
+      "versionDate": "2024-10-14",
+      "size": 130264176,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TorBrowserPlusPlus/TorBrowserPlusPlus-3.5.5.ipa",
+      "developerName": "AppDB / DPixel / Manpreet Singh @thisismanpreets / binnichtaktiv's iPA Library",
+      "localizedDescription": "Injected with Satella. Tor Browser with premium features unlocked. Note: VPN also works.\nLast updated: 08-14-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/ch.b-eng.tor.png",
+      "versions": [
+        {
+          "version": "3.5.5",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TorBrowserPlusPlus/TorBrowserPlusPlus-3.5.5.ipa",
+          "size": 130264176
+        }
+      ]
+    },
+    {
+      "name": "TikTokLRD",
+      "bundleIdentifier": "com.zhiliaoapp.musically",
+      "version": "3.0-30.7.0",
+      "versionDate": "2024-10-14",
+      "size": 238229235,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TikTokLRD/TikTokLRD-3.0-30.7.0.ipa",
+      "developerName": "zxcvbn’s tweaked IPAs / Manpreet Singh @thisismanpreeets / nowesr1",
+      "localizedDescription": "TikTok, injected with a version of TikTokLRD (3.5).\nLast updated: 07-01-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.zhiliaoapp.musically.png",
+      "versions": [
+        {
+          "version": "3.0-30.7.0",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TikTokLRD/TikTokLRD-3.0-30.7.0.ipa",
+          "size": 238229235
+        }
+      ]
+    },
+    {
+      "name": "Spotilife",
+      "bundleIdentifier": "com.spotify.client",
+      "version": "8.8.94",
+      "versionDate": "2024-10-13",
+      "size": 62563687,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Spotilife/Spotilife-8.8.94.ipa",
+      "developerName": "Manpreet Singh @thisismanpreets / Spotilife IPAs / Spotify iOS",
+      "localizedDescription": "This version has support for CarPlay when installed via TrollStore.\nLast updated: 04-20-2024\nStatus: ❌",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.spotify.client.png",
+      "versions": [
+        {
+          "version": "8.8.94",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Spotilife/Spotilife-8.8.94.ipa",
+          "size": 62563687
+        }
+      ]
+    },
+    {
+      "name": "Snapchatiota",
+      "bundleIdentifier": "com.toyopagroup.picaboo",
+      "version": "12.75.0.37-5.2.1",
+      "versionDate": "2024-10-13",
+      "size": 105279226,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Snapchatiota/Snapchatiota-12.75.0.37-5.2.1.ipa",
+      "developerName": "Kanji's discord / nowesr1 / cotegod",
+      "localizedDescription": "SNAPCHAT HAS NOW IMPLEMENTED NEW SIDELOADING DETECTION MEASURES, MAKING ALL MODIFIED VERSIONS OF SNAPCHAT DETECTABLE. AS A RESULT, NO SNAPCHAT TWEAK IS SAFE. IT IS ADVISED TO DISCONTINUE USING ANY SNAPCHAT TWEAKS TO AVOID THE RISK OF HAVING YOUR ACCOUNT/DEVICE BANNED.\nLast updated: 06-02-2024\nStatus: ❌",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.toyopagroup.picaboo.png",
+      "versions": [
+        {
+          "version": "12.75.0.37-5.2.1",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Snapchatiota/Snapchatiota-12.75.0.37-5.2.1.ipa",
+          "size": 105279226
+        }
+      ]
+    },
+    {
+      "name": "Rosiecord",
+      "bundleIdentifier": "com.hammerandchisel.discord",
+      "version": "209.0",
+      "versionDate": "2024-10-13",
+      "size": 100981286,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Rosiecord/Rosiecord-209.0.ipa",
+      "developerName": "acquitelol",
+      "localizedDescription": "Update: I will continue to update the original Rosiecord (Cabin Font + Plumpy + Flowercord) on this library. If you want one of the other customizations, you can get it from the dev's GitHub. Enmity for Discord, but with custom icons. More up-to-date version of Plumpycord with more features.\nLast updated: 04-06-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.hammerandchisel.discord.png",
+      "versions": [
+        {
+          "version": "209.0",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Rosiecord/Rosiecord-209.0.ipa",
+          "size": 100981286
+        }
+      ]
+    },
+    {
+      "name": "RedditPlus",
+      "bundleIdentifier": "com.reddit.Reddit",
+      "version": "2023.36.0",
+      "versionDate": "2024-10-13",
+      "size": 115883349,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/RedditPlus/RedditPlus-2023.36.0.ipa",
+      "developerName": "AppDB / Ed0.ipa / Jacks_Apps / level3tjg / Manpreet Singh @thisismanpreeets / Sultan Mods",
+      "localizedDescription": "Reddit, injected with RedditFilter & RedditSideloadFix (level3tjg), and Riskkit. (AppleCraxkhead)\nLast updated: 07-25-2024\nStatus: ❔",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.reddit.Reddit.png",
+      "versions": [
+        {
+          "version": "2023.36.0",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/RedditPlus/RedditPlus-2023.36.0.ipa",
+          "size": 115883349
+        }
+      ]
+    },
+    {
+      "name": "RadarbotPro",
+      "bundleIdentifier": "com.iteration-mobile.radarbot-free-ww",
+      "version": "9.15",
+      "versionDate": "2024-10-12",
+      "size": 227333741,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/RadarbotPro/RadarbotPro-9.15.ipa",
+      "developerName": "MeemNon / binnichtaktiv's iPA Library",
+      "localizedDescription": "App description here. GPS navigator specialized in radars, injected with Pro.\nLast updated: 07-12-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.iteration-mobile.radarbot-free-ww.png",
+      "versions": [
+        {
+          "version": "9.15",
+          "date": "2024-10-12",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/RadarbotPro/RadarbotPro-9.15.ipa",
+          "size": 227333741
+        }
+      ]
+    },
+    {
+      "name": "PicsArtPlusPlus",
+      "bundleIdentifier": "com.picsart.studio",
+      "version": "21.4.6",
+      "versionDate": "2024-10-12",
+      "size": 109413971,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PicsArtPlusPlus/PicsArtPlusPlus-21.4.6.ipa",
+      "developerName": "zxcvbn’s tweaked IPAs / AppDB / CyPwn IPA Library / DPixel / Manpreet Singh @thisismanpreets / Qamislo - Apps / binnichtaktiv's iPA Library",
+      "localizedDescription": "PicsArt with premium features enbled.\nLast updated: 08-04-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.picsart.studio.png",
+      "versions": [
+        {
+          "version": "21.4.6",
+          "date": "2024-10-12",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PicsArtPlusPlus/PicsArtPlusPlus-21.4.6.ipa",
+          "size": 109413971
+        }
+      ]
+    },
+    {
+      "name": "PhotoshopExpress",
+      "bundleIdentifier": "com.adobe.PSMobile",
+      "version": "23.29.1",
+      "versionDate": "2024-10-11",
+      "size": 115403508,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PhotoshopExpress/PhotoshopExpress-23.29.1.ipa",
+      "developerName": "AppDB / FayezUpdates / iPAWiND / ipalibrary.me",
+      "localizedDescription": "Adobe's Photoshop Express, cracked for all premium features. except cloud storage\nLast updated: 08-12-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.adobe.PSMobile.png",
+      "versions": [
+        {
+          "version": "23.29.1",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PhotoshopExpress/PhotoshopExpress-23.29.1.ipa",
+          "size": 115403508
+        }
+      ]
+    },
+    {
+      "name": "PhotomathPlus",
+      "bundleIdentifier": "com.microblink.PhotoMath",
+      "version": "8.32.0",
+      "versionDate": "2024-10-11",
+      "size": 9538298,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PhotomathPlus/PhotomathPlus-8.32.0.ipa",
+      "developerName": "DPixel / IPA Fire / zxcvbn’s tweaked IPAs",
+      "localizedDescription": "Photomath, with pro features unlocked\nLast updated: 06-30-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.microblink.PhotoMath.png",
+      "versions": [
+        {
+          "version": "8.32.0",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PhotomathPlus/PhotomathPlus-8.32.0.ipa",
+          "size": 9538298
+        }
+      ]
+    },
+    {
+      "name": "Opener",
+      "bundleIdentifier": "com.tijo.opener.Opener",
+      "version": "1.13.5",
+      "versionDate": "2024-10-11",
+      "size": 775574,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Opener/Opener-1.13.5.ipa",
+      "developerName": "CyPwn IPA library",
+      "localizedDescription": "Redirects certain links to their respective apps. Useful for when certain links don't automatically open in some TrollStore-installed apps.\nLast updated: 07-18-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.tijo.opener.Opener.png",
+      "versions": [
+        {
+          "version": "1.13.5",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Opener/Opener-1.13.5.ipa",
+          "size": 775574
+        }
+      ]
+    },
+    {
+      "name": "ObjectRemoval",
+      "bundleIdentifier": "com.skysoft.removalfree",
+      "version": "4.3.6",
+      "versionDate": "2024-10-11",
+      "size": 272114001,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ObjectRemoval/ObjectRemoval-4.3.6.ipa",
+      "developerName": "FayezUpdates",
+      "localizedDescription": "Injected with Premium. App description here. App lets you remove objects from images using AI (more or less working). All features should be working, just ignore the premium sections.\nLast updated: 07-18-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.skysoft.removalfree.png",
+      "versions": [
+        {
+          "version": "4.3.6",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ObjectRemoval/ObjectRemoval-4.3.6.ipa",
+          "size": 272114001
+        }
+      ]
+    },
+    {
+      "name": "Nicegram",
+      "bundleIdentifier": "app.nicegram",
+      "version": "1.4.0",
+      "versionDate": "2024-10-11",
+      "size": 92868382,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Nicegram/Nicegram-1.4.0.ipa",
+      "developerName": "CyPwn IPA Library / AppDB / IPA Library / MeemNon / DPixel / zxcvbn’s tweaked IPAs / iOS Tutorials + App Cracks",
+      "localizedDescription": "Nicegram, cracked for premium features (including having the translate button next to messages in chats). In order to unlock Premium, click on \"Assistant\" at the bottom, then on \"Unleash your Nicegram perks\" and finally click on \"start\" at the bottom. Note: I highly recommend switching to Swiftgram.\nLast updated: 08-05-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/app.nicegram.png",
+      "versions": [
+        {
+          "version": "1.4.0",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Nicegram/Nicegram-1.4.0.ipa",
+          "size": 92868382
+        }
+      ]
+    },
+    {
+      "name": "MyFitnessPalPremium",
+      "bundleIdentifier": "com.myfitnesspal.mfp",
+      "version": "24.23.0",
+      "versionDate": "2024-10-11",
+      "size": 73098275,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MyFitnessPalPremium/MyFitnessPalPremium-24.23.0.ipa",
+      "developerName": "ipalibrary.me / binnichtaktiv's iPA Library",
+      "localizedDescription": "Monitor your journey towards achieving your nutritional, hydration, fitness, and weight loss objectives with MyFitnessPal. This comprehensive health and food tracking application serves as your personal nutritionist, meal strategist, and food journal, available to you whenever you need it. A user requested it so here it is.\nLast updated: 08-16-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.myfitnesspal.mfp.png",
+      "versions": [
+        {
+          "version": "24.23.0",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MyFitnessPalPremium/MyFitnessPalPremium-24.23.0.ipa",
+          "size": 73098275
+        }
+      ]
+    },
+    {
+      "name": "MuslimProPlus",
+      "bundleIdentifier": "com.bitsmedia.muslimpro",
+      "version": "15.8",
+      "versionDate": "2024-10-11",
+      "size": 146170922,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MuslimProPlus/MuslimProPlus-15.8.ipa",
+      "developerName": "IAppsBestLibrary",
+      "localizedDescription": "Deepen your commitment to Islam with Muslim Pro as your app companion. Enjoy a brand new experience with personalized learning and memorization tools, explore our new AI bot that can answer your Islamic questions at any time, and watch exciting Ramadan shows exclusively on Qalbox. Note: AI feature is unavailable.\nLast updated: 07-30-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.bitsmedia.muslimpro.png",
+      "versions": [
+        {
+          "version": "15.8",
+          "date": "2024-10-11",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MuslimProPlus/MuslimProPlus-15.8.ipa",
+          "size": 146170922
+        }
+      ]
+    },
+    {
+      "name": "Misaka",
+      "bundleIdentifier": "com.straight-tamago.misakaRS",
+      "version": "3.4.1",
+      "versionDate": "2024-10-10",
+      "size": 30199441,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Misaka/Misaka-3.4.1.ipa",
+      "developerName": "Misaka",
+      "localizedDescription": "iOS customisation tool for KFD & MDC. This application aims to provide iPhone users with the opportunity to personalize their phones without the need for a jailbreak. Presently, it offers more than 24 default repositories and an impressive selection of over 400 tweaks. Note: Ensure you review the compatible iOS versions before download.\nLast updated: 01-20-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.straight-tamago.misakaRS.png",
+      "versions": [
+        {
+          "version": "3.4.1",
+          "date": "2024-10-10",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Misaka/Misaka-3.4.1.ipa",
+          "size": 30199441
+        }
+      ]
+    },
+    {
+      "name": "MemrisePremium",
+      "bundleIdentifier": "com.memrise.ios.memrisecompanion",
+      "version": "2023.12.6",
+      "versionDate": "2024-10-10",
+      "size": 106107558,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MemrisePremium/MemrisePremium-2023.12.6.ipa",
+      "developerName": "AppDB / Strejda603 / Jimbos iPA Library / DPixel",
+      "localizedDescription": "Injected with Premium. Note: As mentioned here, scenario tab is now patched and cannot be unlocked.\nLast updated: 07-15-2024\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.memrise.ios.memrisecompanion.png",
+      "versions": [
+        {
+          "version": "2023.12.6",
+          "date": "2024-10-10",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MemrisePremium/MemrisePremium-2023.12.6.ipa",
+          "size": 106107558
+        }
+      ]
+    },
+    {
+      "name": "MeituPlusPlus",
+      "bundleIdentifier": "com.meitu.mtxx",
+      "version": "10.15.1",
+      "versionDate": "2024-10-10",
+      "size": 286569156,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MeituPlusPlus/MeituPlusPlus-10.15.1.ipa",
+      "developerName": "iApps / iOS Tutorials + App Cracks",
+      "localizedDescription": "Meitu, a photo & AI Art generator, cracked for premium features. Note: You must log in first and even if it indicates you're not VIP, features are still working. (VIP+ remains inaccessible) + Despite Meitu being a complete photo editing tool it gathers a LOT of data!!\nLast updated: 07-16-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.meitu.mtxx.png",
+      "versions": [
+        {
+          "version": "10.15.1",
+          "date": "2024-10-10",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MeituPlusPlus/MeituPlusPlus-10.15.1.ipa",
+          "size": 286569156
+        }
+      ]
+    },
+    {
+      "name": "Mangayomi",
+      "bundleIdentifier": "com.kodjodevf.mangayomi",
+      "version": "0.1.35",
+      "versionDate": "2024-10-09",
+      "size": 93308009,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Mangayomi/Mangayomi-0.1.35.ipa",
+      "developerName": "kodjodevf",
+      "localizedDescription": "From the GitHub: Mangayomi is free an open source manga reader and anime streaming cross-plateform app inspired by Tachiyomi made with Flutter. It allows users to read manga and watch anime from a variety of sources.\nLast updated: 08-05-2024\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.kodjodevf.mangayomi.png",
+      "versions": [
+        {
+          "version": "0.1.35",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Mangayomi/Mangayomi-0.1.35.ipa",
+          "size": 93308009
+        }
+      ]
+    },
+    {
+      "name": "MacroFactorPremium",
+      "bundleIdentifier": "com.sbs.diet",
+      "version": "2.8.14",
+      "versionDate": "2024-10-09",
+      "size": 62376119,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MacroFactorPremium/MacroFactorPremium-2.8.14.ipa",
+      "developerName": "Lãng Khách🇻🇳",
+      "localizedDescription": "App that leverages advanced algorithms and solid nutrition science to achieve sustainable diet results, personalizing your plan to adapt to metabolic changes. A user requested it so here it is.\nLast updated: 07-15-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.sbs.diet.png",
+      "versions": [
+        {
+          "version": "2.8.14",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/MacroFactorPremium/MacroFactorPremium-2.8.14.ipa",
+          "size": 62376119
+        }
+      ]
+    },
+    {
+      "name": "LoopsiePro",
+      "bundleIdentifier": "com.gamelounge.loopsie.ios",
+      "version": "8.9.2",
+      "versionDate": "2024-10-09",
+      "size": 178876940,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LoopsiePro/LoopsiePro-8.9.2.ipa",
+      "developerName": "Manpreet Singh @thisismanpreeets",
+      "localizedDescription": "Injected with Pro. App that allows you to easily animate parts of your photos. A user requested it so here it is.\nLast updated: 07-16-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.gamelounge.loopsie.ios.png",
+      "versions": [
+        {
+          "version": "8.9.2",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LoopsiePro/LoopsiePro-8.9.2.ipa",
+          "size": 178876940
+        }
+      ]
+    },
+    {
+      "name": "LocketWidgetGold",
+      "bundleIdentifier": "com.locket.Locket",
+      "version": "1.67.0",
+      "versionDate": "2024-10-09",
+      "size": 93639386,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LocketWidgetGold/LocketWidgetGold-1.67.0.ipa",
+      "developerName": "ipalibrary.me",
+      "localizedDescription": "Injected with Gold. Widget app that displays real-time photos from your closest friends directly on your Home Screen. Every time you unlock your phone, you and your best friends will discover new photos from one another.\nLast updated: 08-15-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.locket.Locket.png",
+      "versions": [
+        {
+          "version": "1.67.0",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LocketWidgetGold/LocketWidgetGold-1.67.0.ipa",
+          "size": 93639386
+        }
+      ]
+    },
+    {
+      "name": "LingoDeer",
+      "bundleIdentifier": "com.lingodeer",
+      "version": "2.9.14",
+      "versionDate": "2024-10-09",
+      "size": 94591927,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LingoDeer/LingoDeer-2.9.14.ipa",
+      "developerName": "ipalibrary.me / binnichtaktiv's iPA Library",
+      "localizedDescription": "Injected with Premium. The top app for mastering Asian languages and beyond, trusted by a lot of learners. Expertly crafted lessons ensure efficient and effective learning. Achieve conversational fluency in 12 languages, including Korean, Japanese, Spanish, French, Italian, German, Portuguese, Chinese, Thai, Arabic, Russian, Vietnamese, and English. Full app description here\nLast updated: 08-16-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.lingodeer.png",
+      "versions": [
+        {
+          "version": "2.9.14",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LingoDeer/LingoDeer-2.9.14.ipa",
+          "size": 94591927
+        }
+      ]
+    },
+    {
+      "name": "LightroomPremium",
+      "bundleIdentifier": "com.adobe.lrmobilephone",
+      "version": "9.3.1",
+      "versionDate": "2024-10-09",
+      "size": 186320966,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LightroomPremium/LightroomPremium-9.3.1.ipa",
+      "developerName": "Manpreet Singh @thisismanpreets",
+      "localizedDescription": "Injected with Satella. Another popular video/image editor with pro features unlocked. A user requested it so here it is.\nLast updated: 08-14-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.adobe.lrmobilephone.png",
+      "versions": [
+        {
+          "version": "9.3.1",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/LightroomPremium/LightroomPremium-9.3.1.ipa",
+          "size": 186320966
+        }
+      ]
+    },
+    {
+      "name": "Kodi",
+      "bundleIdentifier": "org.xbmc.kodi-ios",
+      "version": "20.5",
+      "versionDate": "2024-10-09",
+      "size": 149514068,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Kodi/Kodi-20.5.ipa",
+      "developerName": "ArianaMinajj",
+      "localizedDescription": "Multi-featured media player/streamer. Note: Version 18.9 is the last version that will work with TrollStore on iOS 15 and below, new updates requires iOS 16.6 and up. Refer to this issue for more informations.\nLast updated: 04-07-2024\nStatus: ❔",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/org.xbmc.kodi-ios.png",
+      "versions": [
+        {
+          "version": "20.5",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Kodi/Kodi-20.5.ipa",
+          "size": 149514068
+        }
+      ]
+    },
+    {
+      "name": "InstagramRocket",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "315.0.2-3.8.19",
+      "versionDate": "2024-10-07",
+      "size": 140983805,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramRocket/InstagramRocket-315.0.2-3.8.19.ipa",
+      "developerName": "Ed0.ipa (IPA NOT CRACKED)",
+      "localizedDescription": "Not cracked. Instagram injected with Rocket. A user requested it so here it is.\nLast updated: 08-13-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "315.0.2-3.8.19",
+          "date": "2024-10-07",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramRocket/InstagramRocket-315.0.2-3.8.19.ipa",
+          "size": 140983805
+        }
+      ]
+    },
+    {
+      "name": "KitchenStoriesPlus",
+      "bundleIdentifier": "com.AJNSNewMedia.KitchenStories",
+      "version": "23.0.5",
+      "versionDate": "2024-10-09",
+      "size": 53714848,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/KitchenStoriesPlus/KitchenStoriesPlus-23.0.5.ipa",
+      "developerName": "Lãng Khách🇻🇳",
+      "localizedDescription": "App to discover thousands of free recipes and master cooking skills with expert videos. Save your favorites, adjust ingredients easily, and cook distraction-free. Connect with a global community of food enthusiasts.\nLast updated: 08-15-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.AJNSNewMedia.KitchenStories.png",
+      "versions": [
+        {
+          "version": "23.0.5",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/KitchenStoriesPlus/KitchenStoriesPlus-23.0.5.ipa",
+          "size": 53714848
+        }
+      ]
+    },
+    {
+      "name": "KetchupPlus",
+      "bundleIdentifier": "com.benricemccarthy.ketchup",
+      "version": "2024.4",
+      "versionDate": "2024-10-09",
+      "size": 215586009,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/KetchupPlus/KetchupPlus-2024.4.ipa",
+      "developerName": "Lãng Khách🇻🇳",
+      "localizedDescription": "Encyclopaedia app for Pokemon. A user requested it so here it is.\nLast updated: 07-15-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.benricemccarthy.ketchup.png",
+      "versions": [
+        {
+          "version": "2024.4",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/KetchupPlus/KetchupPlus-2024.4.ipa",
+          "size": 215586009
+        }
+      ]
+    },
+    {
+      "name": "InstoriesPro",
+      "bundleIdentifier": "ylee.studio.instories",
+      "version": "5.54.1",
+      "versionDate": "2024-10-03",
+      "size": 206379615,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstoriesPro/InstoriesPro-5.54.1.ipa",
+      "developerName": "IAppsBestLibrary",
+      "localizedDescription": "App to make professional designs effortlessly with Instories through just a few taps. A user requested it so here it is.\nLast updated: 08-12-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/ylee.studio.instories.png",
+      "versions": [
+        {
+          "version": "5.54.1",
+          "date": "2024-10-03",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstoriesPro/InstoriesPro-5.54.1.ipa",
+          "size": 206379615
+        }
+      ]
+    },
+    {
+      "name": "Downie",
+      "bundleIdentifier": "com.charliemonroe.Downie",
+      "version": "1.0-95",
+      "versionDate": "2024-10-03",
+      "size": 22818818,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Downie/Downie-1.0-95.ipa",
+      "developerName": "TestFlight",
+      "localizedDescription": "A simple, powerful, and fast youtube video downloader now for iOS. Note: Beta version decrypted from TestFlight: Only compatible with iOS17 and later.\nLast updated: 05-02-2024\nStatus: ❌",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.charliemonroe.Downie.png",
+      "versions": [
+        {
+          "version": "1.0-95",
+          "date": "2024-10-03",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Downie/Downie-1.0-95.ipa",
+          "size": 22818818
+        }
+      ]
+    },
+    {
+      "name": "BeRealBea",
+      "bundleIdentifier": "AlexisBarreyat.BeReal",
+      "version": "1.1-0.36.3",
+      "versionDate": "2024-10-06",
+      "size": 25439241,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BeRealBea/BeRealBea-1.1-0.36.3.ipa",
+      "developerName": "yandevelop / zxcvbn's tweaked IPAs / Ed0.ipa",
+      "localizedDescription": "BeReal, injected with the tweak Bea. Same as Unblur with more features, full tweak description here.\nLast updated: 08-02-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/AlexisBarreyat.BeReal.png",
+      "versions": [
+        {
+          "version": "1.1-0.36.3",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BeRealBea/BeRealBea-1.1-0.36.3.ipa",
+          "size": 25439241
+        }
+      ]
+    },
+    {
+      "name": "BHTwitter",
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "version": "14-9.3.1-9.44",
+      "versionDate": "2024-10-06",
+      "size": 97584303,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BHTwitter/BHTwitter-14-9.3.1-9.44.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.atebits.Tweetie2.png",
+      "versions": [
+        {
+          "version": "14-9.3.1-9.44",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BHTwitter/BHTwitter-14-9.3.1-9.44.ipa",
+          "size": 97584303
+        }
+      ]
+    },
+    {
+      "name": "ApolloPatcher",
+      "bundleIdentifier": "com.christianselig.Apollo",
+      "version": "1.15.11-0.0.9",
+      "versionDate": "2024-10-03",
+      "size": 89235758,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ApolloPatcher/ApolloPatcher-1.15.11-0.0.9.ipa",
+      "developerName": "ichitaso",
+      "localizedDescription": "Apollo + ApolloPatcher (in-app configurable API keys). Note: I added this app upon request but I'm not familiar with its usage at all so if you come across any issues with the app, I won't be able to provide assistance.\nLast updated: 08-02-2024\nStatus: ✅ ❔",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.christianselig.Apollo.png",
+      "versions": [
+        {
+          "version": "1.15.11-0.0.9",
+          "date": "2024-10-03",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ApolloPatcher/ApolloPatcher-1.15.11-0.0.9.ipa",
+          "size": 89235758
+        }
+      ]
+    },
+    {
+      "name": "AnimeNow",
+      "bundleIdentifier": "com.errorerrorerror.animenow",
+      "version": "1.0.0b1",
+      "versionDate": "2024-10-03",
+      "size": 6691352,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/AnimeNow/AnimeNow-1.0.0b1.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.errorerrorerror.animenow.png",
+      "versions": [
+        {
+          "version": "1.0.0b1",
+          "date": "2024-10-03",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/AnimeNow/AnimeNow-1.0.0b1.ipa",
+          "size": 6691352
+        }
+      ]
+    },
+    {
+      "name": "InfusePro",
+      "bundleIdentifier": "com.firecore.infuse",
+      "version": "7.4.10",
+      "versionDate": "2024-10-03",
+      "size": 44545614,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InfusePro/InfusePro-7.4.10.ipa",
+      "developerName": "Suffuse-Team / InfusePlus",
+      "localizedDescription": "Injected with InfusePlus by dayanch96. Fancy media/video player, cracked for premium. Full app description here\nLast updated: 08-09-2024\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.firecore.infuse.png",
+      "versions": [
+        {
+          "version": "7.4.10",
+          "date": "2024-10-03",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InfusePro/InfusePro-7.4.10.ipa",
+          "size": 44545614
+        }
+      ]
+    },
+    {
+      "name": "InShotPro",
+      "bundleIdentifier": "com.camerasideas.InstaShot",
+      "version": "1.63.3",
+      "versionDate": "2024-10-02",
+      "size": 77797740,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InShotPro/InShotPro-1.63.3.ipa",
+      "developerName": "AppDB / DPixel / iApps / FayezUpdates / Manpreet Singh @thisismanpreets / zxcvbn’s tweaked IPAs",
+      "localizedDescription": "Popular video/image editor with pro features unlocked.\nLast updated: 08-06-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.camerasideas.InstaShot.png",
+      "versions": [
+        {
+          "version": "1.63.3",
+          "date": "2024-10-02",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InShotPro/InShotPro-1.63.3.ipa",
+          "size": 77797740
+        }
+      ]
+    },
+    {
+      "name": "ImpulsePro",
+      "bundleIdentifier": "gen.tech.impulse",
+      "version": "1.30.10",
+      "versionDate": "2024-10-01",
+      "size": 81659589,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ImpulsePro/ImpulsePro-1.30.10.ipa",
+      "developerName": "DPixel",
+      "localizedDescription": "Impulse, cracked with pro features (buy and cancel). Note: Install through TrollStore then reinstall via the AppStore. This process (might) keep the tweak working.\nLast updated: 08-12-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/gen.tech.impulse.png",
+      "versions": [
+        {
+          "version": "1.30.10",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ImpulsePro/ImpulsePro-1.30.10.ipa",
+          "size": 81659589
+        }
+      ]
+    },
+    {
+      "name": "ImgPlayPro",
+      "bundleIdentifier": "me.imgbase.imgplay",
+      "version": "6.3.17",
+      "versionDate": "2024-10-02",
+      "size": 128605516,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ImgPlayPro/ImgPlayPro-6.3.17.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/me.imgbase.imgplay.png",
+      "versions": [
+        {
+          "version": "6.3.17",
+          "date": "2024-10-02",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ImgPlayPro/ImgPlayPro-6.3.17.ipa",
+          "size": 128605516
+        }
+      ]
+    },
+    {
+      "name": "ImageSearch",
+      "bundleIdentifier": "com.ipopapp.imagesearchfree",
+      "version": "6.6",
+      "versionDate": "2024-10-01",
+      "size": 10303693,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ImageSearch/ImageSearch-6.6.ipa",
+      "developerName": "DPixel",
+      "localizedDescription": "Reverse Image Search App, cracked for pro features. Click Pro at the top right, then the purchase button.\nLast updated: 08-12-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.ipopapp.imagesearchfree.png",
+      "versions": [
+        {
+          "version": "6.6",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ImageSearch/ImageSearch-6.6.ipa",
+          "size": 10303693
+        }
+      ]
+    },
+    {
+      "name": "Ignited",
+      "bundleIdentifier": "com.litritt.ignited",
+      "version": "1.10",
+      "versionDate": "2024-10-01",
+      "size": 35402158,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Ignited/Ignited-1.10.ipa",
+      "developerName": "LitRitt",
+      "localizedDescription": "Forked from Delta, this is a multi-core emulator front-end for iOS devices. It offers an attractive user interface and a suite of features not typically found in other emulators.\nLast updated: 03-29-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.litritt.ignited.png",
+      "versions": [
+        {
+          "version": "1.10",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Ignited/Ignited-1.10.ipa",
+          "size": 35402158
+        }
+      ]
+    },
+    {
+      "name": "IPTVPro",
+      "bundleIdentifier": "com.courtois.PerfectIPTVn",
+      "version": "2.7",
+      "versionDate": "2024-10-01",
+      "size": 19553102,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/IPTVPro/IPTVPro-2.7.ipa",
+      "developerName": "Paisseon",
+      "localizedDescription": "Injected with Satella. Another IPTV streamer app. A user requested it so here it is.\nLast updated: 06-20-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.courtois.PerfectIPTVn.png",
+      "versions": [
+        {
+          "version": "2.7",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/IPTVPro/IPTVPro-2.7.ipa",
+          "size": 19553102
+        }
+      ]
+    },
+    {
+      "name": "HomeWorkoutPremium",
+      "bundleIdentifier": "com.abishkking.maleworkout.watchkitapp",
+      "version": "1.23.1",
+      "versionDate": "2024-10-01",
+      "size": 352576899,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/HomeWorkoutPremium/HomeWorkoutPremium-1.23.1.ipa",
+      "developerName": "binnichtaktiv's iPA Library / Paisseon",
+      "localizedDescription": "Injeced with satella. App provides expertly designed fitness plans and workouts for all levels, from beginners to experts. A user requested it so here it is.\nLast updated: 08-14-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.abishkking.maleworkout.watchkitapp.png",
+      "versions": [
+        {
+          "version": "1.23.1",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/HomeWorkoutPremium/HomeWorkoutPremium-1.23.1.ipa",
+          "size": 352576899
+        }
+      ]
+    },
+    {
+      "name": "HevyPro",
+      "bundleIdentifier": "com.hevyapp.hevy",
+      "version": "2.0.6",
+      "versionDate": "2024-10-01",
+      "size": 71982011,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/HevyPro/HevyPro-2.0.6.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.hevyapp.hevy.png",
+      "versions": [
+        {
+          "version": "2.0.6",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/HevyPro/HevyPro-2.0.6.ipa",
+          "size": 71982011
+        }
+      ]
+    },
+    {
+      "name": "Helium",
+      "bundleIdentifier": "com.leemin.helium",
+      "version": "2.0.1",
+      "versionDate": "2024-10-01",
+      "size": 3827002,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Helium/Helium-2.0.1.ipa",
+      "developerName": "leminlimez",
+      "localizedDescription": "Status Bar Widgets for TrollStore, compatible with iOS >=14 and Jailbroken devices as well. Users on iOS >=16 must enable developer mode.\nLast updated: 02-13-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.leemin.helium.png",
+      "versions": [
+        {
+          "version": "2.0.1",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Helium/Helium-2.0.1.ipa",
+          "size": 3827002
+        }
+      ]
+    },
+    {
+      "name": "HdoPlay",
+      "bundleIdentifier": "com.hdoplay.apt",
+      "version": "1.0",
+      "versionDate": "2024-10-01",
+      "size": 23561400,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/HdoPlay/HdoPlay.ipa",
+      "developerName": "N/A",
+      "localizedDescription": "Released on the App Store for a short while, this app is one of the best streamers for TV shows and movies from Hulu, Netflix, Prime Video, Disney+, and more, even including some popular anime titles\nLast updated: 09-03-2022\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.hdoplay.apt.png",
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2024-10-01",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/HdoPlay/HdoPlay.ipa",
+          "size": 23561400
+        }
+      ]
+    }
+  ]
+}

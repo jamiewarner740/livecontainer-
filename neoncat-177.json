@@ -1,0 +1,26 @@
+{
+  "name": "Neoncat 177",
+  "identifier": "com.jamiewarner.neoncat.177",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-177.json",
+  "apps": [
+    {
+      "name": "InstaRocketCracked",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "322.0.1-3.8.23",
+      "versionDate": "2024-10-06",
+      "size": 144685676,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaRocketCracked/InstaRocketCracked-322.0.1-3.8.23.ipa",
+      "developerName": "AppDB / DarkWebUser / DPixel / Manpreet Singh @thisismanpreets / nowesr1 / zxcvbn's tweaked IPAs",
+      "localizedDescription": "Instagram, injected with Rocket Cracked (no ad banner, all features functional). To activate Rocket, follow these steps\nLast updated: 08-13-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "322.0.1-3.8.23",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaRocketCracked/InstaRocketCracked-322.0.1-3.8.23.ipa",
+          "size": 144685676
+        }
+      ]
+    }
+  ]
+}

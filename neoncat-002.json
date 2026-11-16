@@ -1,0 +1,957 @@
+{
+  "name": "Neoncat 002",
+  "identifier": "com.jamiewarner.neoncat.002",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-002.json",
+  "apps": [
+    {
+      "name": "Rosiecord",
+      "bundleIdentifier": "com.hammerandchisel.discord",
+      "version": "262",
+      "versionDate": "2025-01-08",
+      "size": 101242813,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/01-08-2025/Rosiecord-262.ipa",
+      "developerName": "acquitelol",
+      "localizedDescription": "Update: I will continue to update the original Rosiecord (Cabin Font + Plumpy + Flowercord) on this library. If you want one of the other customizations, you can get it from the dev's GitHub. Enmity for Discord, but with custom icons. More up-to-date version of Plumpycord with more features.\nLast updated: 04-06-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.hammerandchisel.discord.png",
+      "versions": [
+        {
+          "version": "262",
+          "date": "2025-01-08",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/01-08-2025/Rosiecord-262.ipa",
+          "size": 101242813
+        }
+      ]
+    },
+    {
+      "name": "SpotC++",
+      "bundleIdentifier": "com.spotify.client",
+      "version": "9.0.2",
+      "versionDate": "2025-01-08",
+      "size": 78994570,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/01-08-2025/SpotC%2B%2B-9.0.2.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.spotify.client.png",
+      "versions": [
+        {
+          "version": "9.0.2",
+          "date": "2025-01-08",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/01-08-2025/SpotC%2B%2B-9.0.2.ipa",
+          "size": 78994570
+        }
+      ]
+    },
+    {
+      "name": "Watusi3",
+      "bundleIdentifier": "net.whatsapp.WhatsApp",
+      "version": "Business-24.24.83",
+      "versionDate": "2025-01-08",
+      "size": 128489116,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/01-08-2025/Watusi3-Business-24.24.83.ipa",
+      "developerName": "CyPwn IPA Library / DPixel / MeemNon / zxcvbn’s tweaked IPAs / FouadRaheb",
+      "localizedDescription": "WhatsApp, injected with Watusi v1.2.36, Stalky v4.1.27, OnlineNotify v3.4.4. Notifications and iCloud backups work with TrollStore.\nLast updated: 07-03-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/net.whatsapp.WhatsApp.png",
+      "versions": [
+        {
+          "version": "Business-24.24.83",
+          "date": "2025-01-08",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/01-08-2025/Watusi3-Business-24.24.83.ipa",
+          "size": 128489116
+        }
+      ]
+    },
+    {
+      "name": "iTorrent",
+      "bundleIdentifier": "ru.nonamedude.iTorrent",
+      "version": "2.0.13-2",
+      "versionDate": "2024-11-28",
+      "size": 7025619,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/11-28-2024/iTorrent-2.0.13-2.ipa",
+      "developerName": "XITRIX",
+      "localizedDescription": "Probably the best Torrent client for iOS 9.3 and up.\nLast updated: 07-30-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/ru.nonamedude.iTorrent.png",
+      "versions": [
+        {
+          "version": "2.0.13-2",
+          "date": "2024-11-28",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/11-28-2024/iTorrent-2.0.13-2.ipa",
+          "size": 7025619
+        }
+      ]
+    },
+    {
+      "name": "UTM",
+      "bundleIdentifier": "com.utmapp.UTM",
+      "version": "HV-4.5.4",
+      "versionDate": "2024-11-17",
+      "size": 122065094,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/11-17-2024/UTM-HV-4.5.4.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.utmapp.UTM.png",
+      "versions": [
+        {
+          "version": "HV-4.5.4",
+          "date": "2024-11-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/11-17-2024/UTM-HV-4.5.4.ipa",
+          "size": 122065094
+        }
+      ]
+    },
+    {
+      "name": "onesecpro",
+      "bundleIdentifier": "wtf.riedel.one-sec",
+      "version": "3.8",
+      "versionDate": "2024-10-17",
+      "size": 110550786,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/onesecpro/onesecpro-3.8.ipa",
+      "developerName": "Lãng Khách🇻🇳 / Crack Hub",
+      "localizedDescription": "App that helps you taking a deep breath before accessing selected websites or apps (like Twitter, YouTube, Instagram), disrupting immediate social media habits and introducing a deliberate pause to reduce usage over time. A user requested it so here it is.\nLast updated: 07-18-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/wtf.riedel.one-sec.png",
+      "versions": [
+        {
+          "version": "3.8",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/onesecpro/onesecpro-3.8.ipa",
+          "size": 110550786
+        }
+      ]
+    },
+    {
+      "name": "inshot",
+      "bundleIdentifier": "com.camerasideas.InstaShot",
+      "version": "1.74.0",
+      "versionDate": "2024-10-17",
+      "size": 142979578,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/inshot/inshot-1.74.0.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.camerasideas.InstaShot.png",
+      "versions": [
+        {
+          "version": "1.74.0",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/inshot/inshot-1.74.0.ipa",
+          "size": 142979578
+        }
+      ]
+    },
+    {
+      "name": "ibisPaintPrime",
+      "bundleIdentifier": "jp.ne.ibis.ibisPaintX",
+      "version": "12.1.2",
+      "versionDate": "2024-10-17",
+      "size": 41099193,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ibisPaintPrime/ibisPaintPrime-12.1.2.ipa",
+      "developerName": "zxcvbn’s tweaked IPAs",
+      "localizedDescription": "Popular drawing app. A user requested it so here it is.\nLast updated: 06-28-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/jp.ne.ibis.ibisPaintX.png",
+      "versions": [
+        {
+          "version": "12.1.2",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/ibisPaintPrime/ibisPaintPrime-12.1.2.ipa",
+          "size": 41099193
+        }
+      ]
+    },
+    {
+      "name": "iTranslatePro",
+      "bundleIdentifier": "com.outerspaceapps.itranslate",
+      "version": "17.3.8",
+      "versionDate": "2024-10-17",
+      "size": 95327276,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iTranslatePro/iTranslatePro-17.3.8.ipa",
+      "developerName": "iOS Tutorials + App Cracks",
+      "localizedDescription": "Injected with Pro. Translation and dictionary app making it easy to break language barriers. It allows for easy translation of text, websites, objects, and voice conversations in over 100 languages. Note: Begin by installing it from the App Store, log in, then proceed to force install the TrollStore version. This should grant access to other features like iTranslate keyboard.\nLast updated: 07-16-2024\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.outerspaceapps.itranslate.png",
+      "versions": [
+        {
+          "version": "17.3.8",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iTranslatePro/iTranslatePro-17.3.8.ipa",
+          "size": 95327276
+        }
+      ]
+    },
+    {
+      "name": "iScreenVIP",
+      "bundleIdentifier": "com.zerone.hidesktop",
+      "version": "3.9.91",
+      "versionDate": "2024-10-17",
+      "size": 347752608,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iScreenVIP/iScreenVIP-3.9.91.ipa",
+      "developerName": "Crack Hub",
+      "localizedDescription": "App with trendy widgets for your lock and home screens, including creative StandBy and interactive options with over 500 choices.\nLast updated: 08-12-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.zerone.hidesktop.png",
+      "versions": [
+        {
+          "version": "3.9.91",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iScreenVIP/iScreenVIP-3.9.91.ipa",
+          "size": 347752608
+        }
+      ]
+    },
+    {
+      "name": "iPoGo",
+      "bundleIdentifier": "com.nianticlabs.pokemongo",
+      "version": "2.7.5",
+      "versionDate": "2024-10-17",
+      "size": 115862609,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iPoGo/iPoGo-2.7.5.ipa",
+      "developerName": "ipogo",
+      "localizedDescription": "Pokemon GO with a bunch of cheats, including joystick-to-walk, increased catch accuracy, sniping, teleporting, etc. USE RESPONSIBLY, OVERUSE CAN GET YOU BANNED.\nLast updated: 08-15-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.nianticlabs.pokemongo.png",
+      "versions": [
+        {
+          "version": "2.7.5",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/iPoGo/iPoGo-2.7.5.ipa",
+          "size": 115862609
+        }
+      ]
+    },
+    {
+      "name": "YukaPremium",
+      "bundleIdentifier": "yuca.scanner",
+      "version": "4.35",
+      "versionDate": "2024-10-17",
+      "size": 123092775,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/YukaPremium/YukaPremium-4.35.ipa",
+      "developerName": "iOS Tutorials + App Cracks",
+      "localizedDescription": "App that let you scan the barcodes of food and personal care items to instantly learn about their health impacts. It provides a rating and detailed information for a thorough analysis of each product. Note: The search feature is currently not working and a premium subscription popup appears every time the app is opened which may be somewhat bothersome.\nLast updated: 07-23-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/yuca.scanner.png",
+      "versions": [
+        {
+          "version": "4.35",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/YukaPremium/YukaPremium-4.35.ipa",
+          "size": 123092775
+        }
+      ]
+    },
+    {
+      "name": "YomuPro",
+      "bundleIdentifier": "net.cecinestpasparis.yomu",
+      "version": "3.8.2",
+      "versionDate": "2024-10-17",
+      "size": 36597315,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/YomuPro/YomuPro-3.8.2.ipa",
+      "developerName": "Paisseon",
+      "localizedDescription": "Independent ebook reader app for book lovers, featuring custom styles and a distraction-free, carefully crafted design for optimal readability. A user requested it so here it is.\nLast updated: 07-17-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/net.cecinestpasparis.yomu.png",
+      "versions": [
+        {
+          "version": "3.8.2",
+          "date": "2024-10-17",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/YomuPro/YomuPro-3.8.2.ipa",
+          "size": 36597315
+        }
+      ]
+    },
+    {
+      "name": "WindyappPro",
+      "bundleIdentifier": "co.windyapp.Windy.watchkitapp",
+      "version": "13.4.1",
+      "versionDate": "2024-10-16",
+      "size": 121501690,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WindyappPro/WindyappPro-13.4.1.ipa",
+      "developerName": "iApps",
+      "localizedDescription": "Expert weather application designed specifically for aquatic and wind-based activities such as sailing, surfing, fishing, and more. It provides comprehensive weather forecasts, real-time global wind maps, and localized weather updates.\nLast updated: 07-27-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/co.windyapp.Windy.watchkitapp.png",
+      "versions": [
+        {
+          "version": "13.4.1",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WindyappPro/WindyappPro-13.4.1.ipa",
+          "size": 121501690
+        }
+      ]
+    },
+    {
+      "name": "WhiteNoisePro",
+      "bundleIdentifier": "com.laoyue.whitenoise",
+      "version": "2.0",
+      "versionDate": "2024-10-16",
+      "size": 81243167,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WhiteNoisePro/WhiteNoisePro-2.0.ipa",
+      "developerName": "iApps",
+      "localizedDescription": "Injected with VIP. White Noise Pro includes a variety of sounds in categories ranging from: sleep, meditation, ASMR, lullaby, classical and relaxing music.\nLast updated: 07-23-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.laoyue.whitenoise.png",
+      "versions": [
+        {
+          "version": "2.0",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WhiteNoisePro/WhiteNoisePro-2.0.ipa",
+          "size": 81243167
+        }
+      ]
+    },
+    {
+      "name": "WebVideoCasterPremium",
+      "bundleIdentifier": "com.instantbits.cast.webvideo",
+      "version": "2.31",
+      "versionDate": "2024-10-16",
+      "size": 42115601,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WebVideoCasterPremium/WebVideoCasterPremium-2.31.ipa",
+      "developerName": "binnichtaktiv's iPA Library",
+      "localizedDescription": "App that lets you cast pretty much anything from your phone to your TV. A user requested it so here it is. Note: Install the v1.40, click \"buy\" then install v2.31 over it. Originally found by binnichtaktiv\nLast updated: 08-07-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.instantbits.cast.webvideo.png",
+      "versions": [
+        {
+          "version": "2.31",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WebVideoCasterPremium/WebVideoCasterPremium-2.31.ipa",
+          "size": 42115601
+        }
+      ]
+    },
+    {
+      "name": "WebSSHPro",
+      "bundleIdentifier": "com.itimeteo.webssh",
+      "version": "26.6",
+      "versionDate": "2024-10-16",
+      "size": 29762304,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WebSSHPro/WebSSHPro-26.6.ipa",
+      "developerName": "binnichtaktiv's iPA Library",
+      "localizedDescription": "A versatile SSH, SFTP, TELNET, and Port Forwarding client that is useful everywhere, anytime, offering functionalities like two-factor authentication, local terminal commands, and secure access with Face ID.\nLast updated: 07-31-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.itimeteo.webssh.png",
+      "versions": [
+        {
+          "version": "26.6",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WebSSHPro/WebSSHPro-26.6.ipa",
+          "size": 29762304
+        }
+      ]
+    },
+    {
+      "name": "WeatherSuper",
+      "bundleIdentifier": "com.andyworks.weather",
+      "version": "3.28",
+      "versionDate": "2024-10-16",
+      "size": 99578038,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WeatherSuper/WeatherSuper-3.28.ipa",
+      "developerName": "Lãng Khách🇻🇳 / Crack Hub",
+      "localizedDescription": "Another (unique design) local forecast and live weather app. A user requested it so here it is.\nLast updated: 07-23-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.andyworks.weather.png",
+      "versions": [
+        {
+          "version": "3.28",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WeatherSuper/WeatherSuper-3.28.ipa",
+          "size": 99578038
+        }
+      ]
+    },
+    {
+      "name": "WeatherRadarPro",
+      "bundleIdentifier": "de.wetteronline.WetterApppro",
+      "version": "2024.14.1",
+      "versionDate": "2024-10-16",
+      "size": 134147456,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WeatherRadarPro/WeatherRadarPro-2024.14.1.ipa",
+      "developerName": "N/A",
+      "localizedDescription": "Reliable local weather predictions, alerts, and comprehensive temperature, wind, and lightning radar all in one. A user requested it so here it is.\nLast updated: 07-24-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/de.wetteronline.WetterApppro.png",
+      "versions": [
+        {
+          "version": "2024.14.1",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WeatherRadarPro/WeatherRadarPro-2024.14.1.ipa",
+          "size": 134147456
+        }
+      ]
+    },
+    {
+      "name": "WazePlus",
+      "bundleIdentifier": "com.waze.iphone",
+      "version": "4.108.0",
+      "versionDate": "2024-10-16",
+      "size": 90782814,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WazePlus/WazePlus-4.108.0.ipa",
+      "developerName": "CyPwn IPA Library",
+      "localizedDescription": "Waze / Plus. A navigation app that assists drivers in reaching their destinations by providing real-time road alerts, ensuring up-to-date information.\nLast updated: 12-23-2023\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.waze.iphone.png",
+      "versions": [
+        {
+          "version": "4.108.0",
+          "date": "2024-10-16",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WazePlus/WazePlus-4.108.0.ipa",
+          "size": 90782814
+        }
+      ]
+    },
+    {
+      "name": "WaterMinderPremium",
+      "bundleIdentifier": "com.waterminder.waterminder.watchkitapp",
+      "version": "6.4.12",
+      "versionDate": "2024-10-15",
+      "size": 522223495,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WaterMinderPremium/WaterMinderPremium-6.4.12.ipa",
+      "developerName": "iOS Tutorials + App Cracks",
+      "localizedDescription": "An easy and intuitive app to track your water intake. Based on your body weight (or your personal goal), WaterMinder reminds you to drink water to meet your daily goals. Note: Begin by installing it from the App Store then proceed to force install the TrollStore version. This should fix any issues like missing app icons, etc., that resulted from the decrypted IPA file.\nLast updated: 07-23-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.waterminder.waterminder.watchkitapp.png",
+      "versions": [
+        {
+          "version": "6.4.12",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WaterMinderPremium/WaterMinderPremium-6.4.12.ipa",
+          "size": 522223495
+        }
+      ]
+    },
+    {
+      "name": "WallcraftPro",
+      "bundleIdentifier": "com.wallpaperscraft.wallpapers",
+      "version": "3.14",
+      "versionDate": "2024-10-15",
+      "size": 91839901,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WallcraftPro/WallcraftPro-3.14.ipa",
+      "developerName": "DPixel",
+      "localizedDescription": "High-quality wallpapers for iPhone, unlocked with Pro. A user requested it so here it is.\nLast updated: 08-01-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.wallpaperscraft.wallpapers.png",
+      "versions": [
+        {
+          "version": "3.14",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/WallcraftPro/WallcraftPro-3.14.ipa",
+          "size": 91839901
+        }
+      ]
+    },
+    {
+      "name": "Violet",
+      "bundleIdentifier": "xyz.project.violet",
+      "version": "1.30.0",
+      "versionDate": "2024-10-15",
+      "size": 93992082,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Violet/Violet-1.30.0.ipa",
+      "developerName": "project-violet",
+      "localizedDescription": "Another strictly 18+ NSFW manga reader. App is a bit buggy - let it download the database, then close and reopen if it freezes. You will have to reopen the app after going into some sub-menus bc there's no way out of them (UI bugs). Supports iOS 14+\nLast updated: 05-26-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/xyz.project.violet.png",
+      "versions": [
+        {
+          "version": "1.30.0",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Violet/Violet-1.30.0.ipa",
+          "size": 93992082
+        }
+      ]
+    },
+    {
+      "name": "VidsAIPro",
+      "bundleIdentifier": "viral.vision.vids",
+      "version": "1.52.0",
+      "versionDate": "2024-10-15",
+      "size": 154841675,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/VidsAIPro/VidsAIPro-1.52.0.ipa",
+      "developerName": "binnichtaktiv's iPA Library",
+      "localizedDescription": "Merge your videos and pictures into a stylish video featuring smooth transitions, artistic effects, and filters, all synchronized to the rhythm of popular music in just a few minutes. Ideal for TikTok and Instagram Reels. A user requested it so here it is. Note: AI style feature is unavailable.\nLast updated: 08-07-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/viral.vision.vids.png",
+      "versions": [
+        {
+          "version": "1.52.0",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/VidsAIPro/VidsAIPro-1.52.0.ipa",
+          "size": 154841675
+        }
+      ]
+    },
+    {
+      "name": "VSCOPremium",
+      "bundleIdentifier": "co.visualsupply.cam",
+      "version": "355.0.1",
+      "versionDate": "2024-10-15",
+      "size": 117025196,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/VSCOPremium/VSCOPremium-355.0.1.ipa",
+      "developerName": "IPA Fire / binnichtaktiv's iPA Library / Manpreet Singh @thisismanpreets",
+      "localizedDescription": "VSCO with premium features unlocked. Note: Install through TrollStore then reinstall via the AppStore or install it from the App Store then proceed to force install the TrollStore version. This process (might) keep the tweak working and should resolve any download problems.\nLast updated: 07-30-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/co.visualsupply.cam.png",
+      "versions": [
+        {
+          "version": "355.0.1",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/VSCOPremium/VSCOPremium-355.0.1.ipa",
+          "size": 117025196
+        }
+      ]
+    },
+    {
+      "name": "UsagePro",
+      "bundleIdentifier": "com.olegst.usage",
+      "version": "4.20.5",
+      "versionDate": "2024-10-15",
+      "size": 20484617,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/UsagePro/UsagePro-4.20.5.ipa",
+      "developerName": "AbodSyripa",
+      "localizedDescription": "App that allows you to keep an eye on your device's activity, data consumption, connection velocity, and more, featuring 21 Home Screen widgets, highly customizable Super widgets, and brand-new Lock Screen widgets!\nLast updated: 04-07-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.olegst.usage.png",
+      "versions": [
+        {
+          "version": "4.20.5",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/UsagePro/UsagePro-4.20.5.ipa",
+          "size": 20484617
+        }
+      ]
+    },
+    {
+      "name": "TwitchToolbox",
+      "bundleIdentifier": "tv.twitch",
+      "version": "14.2",
+      "versionDate": "2024-10-15",
+      "size": 74624303,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TwitchToolbox/TwitchToolbox-14.2.ipa",
+      "developerName": "AppDB / DPixel",
+      "localizedDescription": "Twitch, with added features including theme support, auto claiming channel points, adblock, and third party emote support\nLast updated: 06-04-2023\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/tv.twitch.png",
+      "versions": [
+        {
+          "version": "14.2",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TwitchToolbox/TwitchToolbox-14.2.ipa",
+          "size": 74624303
+        }
+      ]
+    },
+    {
+      "name": "TruecallerPremium",
+      "bundleIdentifier": "com.truesoftware.TrueCallerOther",
+      "version": "12.75.4",
+      "versionDate": "2024-10-15",
+      "size": 94163248,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TruecallerPremium/TruecallerPremium-12.75.4.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.truesoftware.TrueCallerOther.png",
+      "versions": [
+        {
+          "version": "12.75.4",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TruecallerPremium/TruecallerPremium-12.75.4.ipa",
+          "size": 94163248
+        }
+      ]
+    },
+    {
+      "name": "TruckerPathDiamond",
+      "bundleIdentifier": "com.Trucker-Path-Pro",
+      "version": "6.4.2",
+      "versionDate": "2024-10-15",
+      "size": 367685736,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TruckerPathDiamond/TruckerPathDiamond-6.4.2.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.Trucker-Path-Pro.png",
+      "versions": [
+        {
+          "version": "6.4.2",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TruckerPathDiamond/TruckerPathDiamond-6.4.2.ipa",
+          "size": 367685736
+        }
+      ]
+    },
+    {
+      "name": "TrollStarTE",
+      "bundleIdentifier": "com.thuthuatjb.trollforcete",
+      "version": "3.0",
+      "versionDate": "2024-10-15",
+      "size": 989843,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollStarTE/TrollStarTE-3.0.ipa",
+      "developerName": "thuthuatjb",
+      "localizedDescription": "An enhanced iteration of TrollStar featuring a revamped user interface and an additional ESign+ installation feature.\nLast updated: 01-25-2024\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.thuthuatjb.trollforcete.png",
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollStarTE/TrollStarTE-3.0.ipa",
+          "size": 989843
+        }
+      ]
+    },
+    {
+      "name": "TrollStar",
+      "bundleIdentifier": "com.34306.trollforce",
+      "version": "1.1",
+      "versionDate": "2024-10-15",
+      "size": 1155628,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollStar/TrollStar-1.1.ipa",
+      "developerName": "34306",
+      "localizedDescription": "TrollStar, which functions primarily as a TrollStore installer, offers a notably more dependable installation process compared to Misaka. A tutorial made by Michael can be found here. Note: Read carefully the repo and releases tab for more informations.\nLast updated: 01-22-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.34306.trollforce.png",
+      "versions": [
+        {
+          "version": "1.1",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollStar/TrollStar-1.1.ipa",
+          "size": 1155628
+        }
+      ]
+    },
+    {
+      "name": "TrollSpeed",
+      "bundleIdentifier": "ch.xxtou.hudapp",
+      "version": "1.10.1",
+      "versionDate": "2024-10-14",
+      "size": 160220,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollSpeed/TrollSpeed-1.10.1.ipa",
+      "developerName": "Lessica",
+      "localizedDescription": "Displays upload and download speeds beneath the status bar. Work on all iOS versions compatible with TrollStore. Note: on iOS 16 and above, \"Developer Mode\" needs to be activated.\nLast updated: 06-21-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/ch.xxtou.hudapp.png",
+      "versions": [
+        {
+          "version": "1.10.1",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollSpeed/TrollSpeed-1.10.1.ipa",
+          "size": 160220
+        }
+      ]
+    },
+    {
+      "name": "TrollRecorder",
+      "bundleIdentifier": "wiki.qaq.trapp",
+      "version": "1.10.2-280",
+      "versionDate": "2024-10-14",
+      "size": 3898404,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollRecorder/TrollRecorder-1.10.2-280.ipa",
+      "developerName": "Lessica / TrollRecorder",
+      "localizedDescription": "Advanced audio recorder with TrollStore. Basic features are available at no cost, advanced features can be unlocked with the purchase of a 5€ license.\nLast updated: 07-25-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/wiki.qaq.trapp.png",
+      "versions": [
+        {
+          "version": "1.10.2-280",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollRecorder/TrollRecorder-1.10.2-280.ipa",
+          "size": 3898404
+        }
+      ]
+    },
+    {
+      "name": "TrollMisaka",
+      "bundleIdentifier": "com.straight-tamago.trollmisaka",
+      "version": "2.0",
+      "versionDate": "2024-10-15",
+      "size": 913060,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollMisaka/TrollMisaka-2.0.ipa",
+      "developerName": "straight-tamago",
+      "localizedDescription": "TrollStore installer for iOS 15.7.2-15.8.1. Refer to the Installing TrollStore (TrollMisaka) guide for detailed instructions.\nLast updated: 01-19-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.straight-tamago.trollmisaka.png",
+      "versions": [
+        {
+          "version": "2.0",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollMisaka/TrollMisaka-2.0.ipa",
+          "size": 913060
+        }
+      ]
+    },
+    {
+      "name": "TrollLEDs",
+      "bundleIdentifier": "com.ps.TrollLEDs",
+      "version": "1.1.0",
+      "versionDate": "2024-10-14",
+      "size": 214605,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollLEDs/TrollLEDs-1.1.0.ipa",
+      "developerName": "PoomSmart",
+      "localizedDescription": "Control individual flashlight LEDs. Note: Refer to the original GitHub repository to find the list of supported devices.\nLast updated: 02-04-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.ps.TrollLEDs.png",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollLEDs/TrollLEDs-1.1.0.ipa",
+          "size": 214605
+        }
+      ]
+    },
+    {
+      "name": "TrollInstallerX",
+      "bundleIdentifier": "com.Alfie.TrollInstallerX",
+      "version": "1.0.2",
+      "versionDate": "2024-10-14",
+      "size": 6888282,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollInstallerX/TrollInstallerX-1.0.2.ipa",
+      "developerName": "alfiecg24",
+      "localizedDescription": "TrollStore installer for iOS 14.0 to 16.6.1\nLast updated: 04-09-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.Alfie.TrollInstallerX.png",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollInstallerX/TrollInstallerX-1.0.2.ipa",
+          "size": 6888282
+        }
+      ]
+    },
+    {
+      "name": "TrollInstallerMDC",
+      "bundleIdentifier": "com.dhinakg.trollinstallermdc",
+      "version": "1.0.4",
+      "versionDate": "2024-10-14",
+      "size": 228202,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollInstallerMDC/TrollInstallerMDC-1.0.4.ipa",
+      "developerName": "ramblings",
+      "localizedDescription": "Install TrollStore 2 on your device using MacDirtyCow, compatible with iOS versions iOS 15 - iOS 15.7.1/iOS 16.1.2. Refer to the Installing TrollStore guide for detailed instructions.\nLast updated: 12-08-2023\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.dhinakg.trollinstallermdc.png",
+      "versions": [
+        {
+          "version": "1.0.4",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollInstallerMDC/TrollInstallerMDC-1.0.4.ipa",
+          "size": 228202
+        }
+      ]
+    },
+    {
+      "name": "TrollFools",
+      "bundleIdentifier": "wiki.qaq.TrollFools",
+      "version": "2.0-2",
+      "versionDate": "2024-10-14",
+      "size": 28248614,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollFools/TrollFools-2.0-2.ipa",
+      "developerName": "Lessica / trollfools",
+      "localizedDescription": "Experimental app for injecting tweaks into App Store apps.\nLast updated: 07-28-2024\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/wiki.qaq.TrollFools.png",
+      "versions": [
+        {
+          "version": "2.0-2",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollFools/TrollFools-2.0-2.ipa",
+          "size": 28248614
+        }
+      ]
+    },
+    {
+      "name": "TrollCuts",
+      "bundleIdentifier": "com.udevs.TrollCuts",
+      "version": "1.1",
+      "versionDate": "2024-10-14",
+      "size": 529664,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollCuts/TrollCuts-1.1.ipa",
+      "developerName": "udevsharold",
+      "localizedDescription": "Shortcuts extensions for iOS 16.0+\nLast updated: 01-23-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.udevs.TrollCuts.png",
+      "versions": [
+        {
+          "version": "1.1",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollCuts/TrollCuts-1.1.ipa",
+          "size": 529664
+        }
+      ]
+    },
+    {
+      "name": "TrollBox",
+      "bundleIdentifier": "live.cclerc.trollbox",
+      "version": "0.0.6a",
+      "versionDate": "2024-10-14",
+      "size": 3510461,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollBox/TrollBox-0.0.6a.ipa",
+      "developerName": "c22dev",
+      "localizedDescription": "A bunch of TrollStore tools packed into one application. Tools include AirTroller, carrier changer, location simulation, passcode buttons theming, device (un)supervised spoof, etc. This is still in alpha, so expect bugs if you try it\nLast updated: 11-29-2023\nStatus: ❌",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/live.cclerc.trollbox.png",
+      "versions": [
+        {
+          "version": "0.0.6a",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollBox/TrollBox-0.0.6a.ipa",
+          "size": 3510461
+        }
+      ]
+    },
+    {
+      "name": "TrollApps",
+      "bundleIdentifier": "org.resonance.store",
+      "version": "2.1",
+      "versionDate": "2024-10-14",
+      "size": 2127280,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollApps/TrollApps-2.1.ipa",
+      "developerName": "TrollApps",
+      "localizedDescription": "This new TrollApps serves as a substitute to the iOS App Store for individuals using TrollStore, providing an updated version of its predecessor (Below). Let users download and install applications from various repositories into TrollStore. Require iOS 14.0> and latest version of TrollStore. Note: Some apps may remain marked as \"update\" even though they are running the latest version. + Web version here.\nLast updated: 12-29-2023\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/org.resonance.store.png",
+      "versions": [
+        {
+          "version": "2.1",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollApps/TrollApps-2.1.ipa",
+          "size": 2127280
+        }
+      ]
+    },
+    {
+      "name": "TrollAppDuplicator",
+      "bundleIdentifier": "com.zznq.trollappduplicator",
+      "version": "1.1",
+      "versionDate": "2024-10-14",
+      "size": 175605,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollAppDuplicator/TrollAppDuplicator-1.1.ipa",
+      "developerName": "BreakOnCrash / TrollAppDuplicator",
+      "localizedDescription": "iOS App duplicator for TS which makes it easier to copy apps (with a different bundleID).\nLast updated: 08-03-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.zznq.trollappduplicator.png",
+      "versions": [
+        {
+          "version": "1.1",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TrollAppDuplicator/TrollAppDuplicator-1.1.ipa",
+          "size": 175605
+        }
+      ]
+    },
+    {
+      "name": "TransitRoyale",
+      "bundleIdentifier": "com.samvermette.Transit",
+      "version": "5.17.0",
+      "versionDate": "2024-10-14",
+      "size": 95381069,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TransitRoyale/TransitRoyale-5.17.0.ipa",
+      "developerName": "Lãng Khách🇻🇳",
+      "localizedDescription": "App to accurately view next departure times, track the location of nearby buses and trains on a map, and access upcoming transit schedules.\nLast updated: 04-20-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.samvermette.Transit.png",
+      "versions": [
+        {
+          "version": "5.17.0",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TransitRoyale/TransitRoyale-5.17.0.ipa",
+          "size": 95381069
+        }
+      ]
+    },
+    {
+      "name": "TorBrowserPremium",
+      "bundleIdentifier": "ch.b-eng.tor",
+      "version": "3.4.21",
+      "versionDate": "2024-10-14",
+      "size": 124682319,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TorBrowserPremium/TorBrowserPremium-3.4.21.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/ch.b-eng.tor.png",
+      "versions": [
+        {
+          "version": "3.4.21",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TorBrowserPremium/TorBrowserPremium-3.4.21.ipa",
+          "size": 124682319
+        }
+      ]
+    },
+    {
+      "name": "TikTokLRDCracked",
+      "bundleIdentifier": "com.zhiliaoapp.musically",
+      "version": "2.5-31.9.0",
+      "versionDate": "2024-10-14",
+      "size": 239968530,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TikTokLRDCracked/TikTokLRDCracked-2.5-31.9.0.ipa",
+      "developerName": "AppDB / KZStore* / IPA Fire / MeemNon / zxcvbn’s tweaked IPAs / iApps / iPAWiND / m7 / riadipa",
+      "localizedDescription": "TikTok, injected with a cracked version of TikTokLRD (3.4). Note: Support will not be provided for this version, so please refrain from submitting any issues.\nLast updated: 01-23-2024\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.zhiliaoapp.musically.png",
+      "versions": [
+        {
+          "version": "2.5-31.9.0",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TikTokLRDCracked/TikTokLRDCracked-2.5-31.9.0.ipa",
+          "size": 239968530
+        }
+      ]
+    },
+    {
+      "name": "Things3",
+      "bundleIdentifier": "com.culturedcode.ThingsiPhone.WatchApp",
+      "version": "3.19.3",
+      "versionDate": "2024-10-14",
+      "size": 51164188,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Things3/Things3-3.19.3.ipa",
+      "developerName": "N/A",
+      "localizedDescription": "App that assists you in organizing your schedule, managing projects, and achieving your goals. Note: Versions up to 3.19.3 crashes for iOS 15.5 and below.\nLast updated: 06-13-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.culturedcode.ThingsiPhone.WatchApp.png",
+      "versions": [
+        {
+          "version": "3.19.3",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Things3/Things3-3.19.3.ipa",
+          "size": 51164188
+        }
+      ]
+    },
+    {
+      "name": "TempoPro",
+      "bundleIdentifier": "com.quvideo.VISO",
+      "version": "4.46.0",
+      "versionDate": "2024-10-14",
+      "size": 91555638,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TempoPro/TempoPro-4.46.0.ipa",
+      "developerName": "DPixel / Manpreet Singh @thisismanpreets",
+      "localizedDescription": "Tempo, with pro features unlocked, not confirmed working on iOS 14.x.\nLast updated: 02-25-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.quvideo.VISO.png",
+      "versions": [
+        {
+          "version": "4.46.0",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TempoPro/TempoPro-4.46.0.ipa",
+          "size": 91555638
+        }
+      ]
+    },
+    {
+      "name": "TarteelPremium",
+      "bundleIdentifier": "com.iqraapp.Iqra",
+      "version": "5.39.5",
+      "versionDate": "2024-10-13",
+      "size": 104422933,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TarteelPremium/TarteelPremium-5.39.5.ipa",
+      "developerName": "DPixel",
+      "localizedDescription": "Tarteel is the first-ever Quran app powered by AI. Simply tap the microphone, start your recitation, and observe as the verses appear in front of you.\nLast updated: 04-06-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.iqraapp.Iqra.png",
+      "versions": [
+        {
+          "version": "5.39.5",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TarteelPremium/TarteelPremium-5.39.5.ipa",
+          "size": 104422933
+        }
+      ]
+    },
+    {
+      "name": "TaioPro",
+      "bundleIdentifier": "app.cyan.taio",
+      "version": "1.68.0",
+      "versionDate": "2024-10-13",
+      "size": 14894577,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TaioPro/TaioPro-1.68.0.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/app.cyan.taio.png",
+      "versions": [
+        {
+          "version": "1.68.0",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TaioPro/TaioPro-1.68.0.ipa",
+          "size": 14894577
+        }
+      ]
+    },
+    {
+      "name": "TabataTimerPremium",
+      "bundleIdentifier": "com.alexandersergienko.TabataTimer",
+      "version": "5.1.14",
+      "versionDate": "2024-10-13",
+      "size": 17586984,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TabataTimerPremium/TabataTimerPremium-5.1.14.ipa",
+      "developerName": "Paisseon / ArianaMinajj",
+      "localizedDescription": "App for both beginners and advanced users, offers a user-friendly interface for simple one-click workout starts and customizable options for tailored fitness routines. A user requested it so here it is.\nLast updated: 04-14-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.alexandersergienko.TabataTimer.png",
+      "versions": [
+        {
+          "version": "5.1.14",
+          "date": "2024-10-13",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TabataTimerPremium/TabataTimerPremium-5.1.14.ipa",
+          "size": 17586984
+        }
+      ]
+    }
+  ]
+}

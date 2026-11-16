@@ -1,0 +1,26 @@
+{
+  "name": "Neoncat 107",
+  "identifier": "com.jamiewarner.neoncat.107",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-107.json",
+  "apps": [
+    {
+      "name": "InstaLRDBH",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "2.5-312.0.1",
+      "versionDate": "2024-10-06",
+      "size": 143512305,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaLRDBH/InstaLRDBH-2.5-312.0.1.ipa",
+      "developerName": "rznkn / riadipa",
+      "localizedDescription": "Instagram, injected with LRD Cracked and BH. Note: Support will not be provided for this so please refrain from submitting any issues. Refer to this issue for more informations.\nLast updated: 01-20-2024\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "2.5-312.0.1",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaLRDBH/InstaLRDBH-2.5-312.0.1.ipa",
+          "size": 143512305
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Neoncat 120",
+  "identifier": "com.jamiewarner.neoncat.120",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-120.json",
+  "apps": [
+    {
+      "name": "InstagramLRD",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "347.2.5",
+      "versionDate": "2024-10-03",
+      "size": 159734532,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramLRD/InstagramLRD-347.2.5.ipa",
+      "developerName": "IPA Fire / nowesr1 / Manpreet Singh @thisismanpreets",
+      "localizedDescription": "Not cracked. If you've used TikTokLRD, imagine that but for Instagram. Features include media saving/sharing/previewing (stories included), show follow status, disable typing status, view DMs anonymously, disable ads, FaceID for account switching, etc.\nLast updated: 08-14-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "347.2.5",
+          "date": "2024-10-03",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramLRD/InstagramLRD-347.2.5.ipa",
+          "size": 159734532
+        }
+      ]
+    }
+  ]
+}

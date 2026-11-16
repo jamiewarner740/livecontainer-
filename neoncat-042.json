@@ -1,0 +1,235 @@
+{
+  "name": "Neoncat 042",
+  "identifier": "com.jamiewarner.neoncat.042",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-042.json",
+  "apps": [
+    {
+      "name": "Watusi3",
+      "bundleIdentifier": "net.whatsapp.WhatsApp",
+      "version": "23.25.80-1.2.11-3.4.4",
+      "versionDate": "2024-10-15",
+      "size": 97588153,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Watusi3/Watusi3-23.25.80-1.2.11-3.4.4.ipa",
+      "developerName": "CyPwn IPA Library / DPixel / MeemNon / zxcvbn’s tweaked IPAs / FouadRaheb",
+      "localizedDescription": "WhatsApp, injected with Watusi v1.2.36, Stalky v4.1.27, OnlineNotify v3.4.4. Notifications and iCloud backups work with TrollStore.\nLast updated: 07-03-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/net.whatsapp.WhatsApp.png",
+      "versions": [
+        {
+          "version": "23.25.80-1.2.11-3.4.4",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Watusi3/Watusi3-23.25.80-1.2.11-3.4.4.ipa",
+          "size": 97588153
+        }
+      ]
+    },
+    {
+      "name": "TwitchPlus",
+      "bundleIdentifier": "tv.twitch",
+      "version": "19.1.2-0.1.1",
+      "versionDate": "2024-10-15",
+      "size": 77804705,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TwitchPlus/TwitchPlus-19.1.2-0.1.1.ipa",
+      "developerName": "AppDB / DPixel / zxcvbn's tweaked IPAs / level3tjg / Ed0.ipa / ArianaMinajj",
+      "localizedDescription": "Alternative to Twitch Toolbox, Twitch with no ads.\nLast updated: 08-13-2024\nStatus: ✅ ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/tv.twitch.png",
+      "versions": [
+        {
+          "version": "19.1.2-0.1.1",
+          "date": "2024-10-15",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TwitchPlus/TwitchPlus-19.1.2-0.1.1.ipa",
+          "size": 77804705
+        }
+      ]
+    },
+    {
+      "name": "TikTokDark",
+      "bundleIdentifier": "com.zhiliaoapp.musically",
+      "version": "30.4.0",
+      "versionDate": "2024-10-14",
+      "size": 169760516,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TikTokDark/TikTokDark-30.4.0.ipa",
+      "developerName": "Manpreet Singh @thisismanpreets / AppDB / DPixel / FayezUpdates / iApps / zxcvbn's tweaked IPAs / nowesr1",
+      "localizedDescription": "Alternative to DLTikTok with similar features. If you don't see a settings option for Dark, click the empty space at the top right of the TikTok settings page. It's an invisible button\nLast updated: 08-08-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.zhiliaoapp.musically.png",
+      "versions": [
+        {
+          "version": "30.4.0",
+          "date": "2024-10-14",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/TikTokDark/TikTokDark-30.4.0.ipa",
+          "size": 169760516
+        }
+      ]
+    },
+    {
+      "name": "PicsArtPlusPlus",
+      "bundleIdentifier": "com.picsart.studio",
+      "version": "23.9.1",
+      "versionDate": "2024-10-12",
+      "size": 104714105,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PicsArtPlusPlus/PicsArtPlusPlus-23.9.1.ipa",
+      "developerName": "zxcvbn’s tweaked IPAs / AppDB / CyPwn IPA Library / DPixel / Manpreet Singh @thisismanpreets / Qamislo - Apps / binnichtaktiv's iPA Library",
+      "localizedDescription": "PicsArt with premium features enbled.\nLast updated: 08-04-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.picsart.studio.png",
+      "versions": [
+        {
+          "version": "23.9.1",
+          "date": "2024-10-12",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PicsArtPlusPlus/PicsArtPlusPlus-23.9.1.ipa",
+          "size": 104714105
+        }
+      ]
+    },
+    {
+      "name": "PhotoshopExpress",
+      "bundleIdentifier": "com.adobe.PSMobile",
+      "version": "24.5.0",
+      "versionDate": "2024-10-12",
+      "size": 152095628,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PhotoshopExpress/PhotoshopExpress-24.5.0.ipa",
+      "developerName": "AppDB / FayezUpdates / iPAWiND / ipalibrary.me",
+      "localizedDescription": "Adobe's Photoshop Express, cracked for all premium features. except cloud storage\nLast updated: 08-12-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.adobe.PSMobile.png",
+      "versions": [
+        {
+          "version": "24.5.0",
+          "date": "2024-10-12",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/PhotoshopExpress/PhotoshopExpress-24.5.0.ipa",
+          "size": 152095628
+        }
+      ]
+    },
+    {
+      "name": "InstagramRegramCracked",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "345.3.3-1.0b8",
+      "versionDate": "2024-10-07",
+      "size": 168828840,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramRegramCracked/InstagramRegramCracked-345.3.3-1.0b8.ipa",
+      "developerName": "CyPwn IPA Library / FouadRaheb",
+      "localizedDescription": "Regram is a powerful tweak that appears to be even more promising than Rocket. This cracked version is brought to you by CyPwn and CBZ. A user requested it so here it is. For Regram b8: Go to Regram settings, select Manage License, connect to Patreon (subscribe for free) and restore your subscription. Note: Regram isn't working on versions 344.0.9 and above. We may need to wait for a new crack to support these Instagram versions. (if we ever get one)\nLast updated: 08-06-2024\nStatus: ⚠️ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "345.3.3-1.0b8",
+          "date": "2024-10-07",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramRegramCracked/InstagramRegramCracked-345.3.3-1.0b8.ipa",
+          "size": 168828840
+        }
+      ]
+    },
+    {
+      "name": "BeRealBea",
+      "bundleIdentifier": "AlexisBarreyat.BeReal",
+      "version": "1.3.6-2.4.0",
+      "versionDate": "2024-10-06",
+      "size": 52507835,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BeRealBea/BeRealBea-1.3.6-2.4.0.ipa",
+      "developerName": "yandevelop / zxcvbn's tweaked IPAs / Ed0.ipa",
+      "localizedDescription": "BeReal, injected with the tweak Bea. Same as Unblur with more features, full tweak description here.\nLast updated: 08-02-2024\nStatus: ✅ 👍 ⭐",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/AlexisBarreyat.BeReal.png",
+      "versions": [
+        {
+          "version": "1.3.6-2.4.0",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BeRealBea/BeRealBea-1.3.6-2.4.0.ipa",
+          "size": 52507835
+        }
+      ]
+    },
+    {
+      "name": "FacebookWolf",
+      "bundleIdentifier": "com.facebook.Facebook",
+      "version": "426.0",
+      "versionDate": "2024-09-29",
+      "size": 140546097,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/FacebookWolf/FacebookWolf-426.0.ipa",
+      "developerName": "CyPwn IPA Library / Manpreet Singh @thisismanpreets / FayezUpdates / DPixel / CydiaAbdullah / iApps / Clement ",
+      "localizedDescription": "Facebook, injected with Wolf for Facebook by Michael Lema.\nLast updated: 08-10-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.facebook.Facebook.png",
+      "versions": [
+        {
+          "version": "426.0",
+          "date": "2024-09-29",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/FacebookWolf/FacebookWolf-426.0.ipa",
+          "size": 140546097
+        }
+      ]
+    },
+    {
+      "name": "Enmity",
+      "bundleIdentifier": "com.hammerandchisel.discord",
+      "version": "2.2.6-194.0",
+      "versionDate": "2024-10-09",
+      "size": 103897880,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Enmity/Enmity-2.2.6-194.0.ipa",
+      "developerName": "CyPwn IPA Library / Enmity Team / zxcvbn's tweaked IPAs",
+      "localizedDescription": "Discord, injected with the popular tweak Enmity!\nLast updated: 08-11-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.hammerandchisel.discord.png",
+      "versions": [
+        {
+          "version": "2.2.6-194.0",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/Enmity/Enmity-2.2.6-194.0.ipa",
+          "size": 103897880
+        }
+      ]
+    },
+    {
+      "name": "EeveeSpotify",
+      "bundleIdentifier": "com.spotify.client",
+      "version": "8.9.50-4.3",
+      "versionDate": "2024-10-09",
+      "size": 75026367,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/EeveeSpotify/EeveeSpotify-8.9.50-4.3.ipa",
+      "developerName": "whoeevee / asdfzxcvbn / EeveeSpotify IPAs",
+      "localizedDescription": "As the successor of the original and now outdated Spotilife tweak, EeveeSpotify emerges as the first and only tweak (for now) with significant potential for accessing Spotify Premium. Note: To fix widgets, install Spotify from the App Store then proceed to force install Eevee over Spotify. Please refrain from opening issues here.\nLast updated: 08-10-2024\nStatus: ✅ ⭐ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.spotify.client.png",
+      "versions": [
+        {
+          "version": "8.9.50-4.3",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/EeveeSpotify/EeveeSpotify-8.9.50-4.3.ipa",
+          "size": 75026367
+        }
+      ]
+    },
+    {
+      "name": "BHX",
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "version": "10.24-4.2",
+      "versionDate": "2024-10-08",
+      "size": 120937899,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BHX/BHX-10.24-4.2.ipa",
+      "developerName": "BandarHL / AppDB / Manpreet Singh @thisismanpreeets / DPixel / CydiaAbdullah / zxcvbn's tweaked IPAs / TrollStore AppsUpdates / nowesr1 / Sultan Mods / binnichtaktiv's iPA Library / nowesr1",
+      "localizedDescription": "Twitter, with added features such as custom fonts, video saving, no ads, tabs customization, and more!\nLast updated: 08-16-2024\nStatus: ✅ 👍",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.atebits.Tweetie2.png",
+      "versions": [
+        {
+          "version": "10.24-4.2",
+          "date": "2024-10-08",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/BHX/BHX-10.24-4.2.ipa",
+          "size": 120937899
+        }
+      ]
+    },
+    {
+      "name": "AIChatSmith",
+      "bundleIdentifier": "co.vulcanlabs.moodtracker",
+      "version": "6.5",
+      "versionDate": "2024-09-27",
+      "size": 56038752,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/AIChatSmith/AIChatSmith-6.5.ipa",
+      "developerName": "Unknown",
+      "localizedDescription": "",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/co.vulcanlabs.moodtracker.png",
+      "versions": [
+        {
+          "version": "6.5",
+          "date": "2024-09-27",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/AIChatSmith/AIChatSmith-6.5.ipa",
+          "size": 56038752
+        }
+      ]
+    }
+  ]
+}

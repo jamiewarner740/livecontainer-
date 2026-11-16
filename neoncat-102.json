@@ -1,0 +1,45 @@
+{
+  "name": "Neoncat 102",
+  "identifier": "com.jamiewarner.neoncat.102",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-102.json",
+  "apps": [
+    {
+      "name": "InstagramLRDCracked",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "2.5-314.0.6",
+      "versionDate": "2024-10-06",
+      "size": 123773442,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramLRDCracked/InstagramLRDCracked-2.5-314.0.6.ipa",
+      "developerName": "riadipa",
+      "localizedDescription": "Crack fixed, Similar features to TikTokLRD but specifically tailored for Instagram. Note: Support will not be provided for this so please refrain from submitting any issues.\nLast updated: 01-14-2024\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "2.5-314.0.6",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstagramLRDCracked/InstagramLRDCracked-2.5-314.0.6.ipa",
+          "size": 123773442
+        }
+      ]
+    },
+    {
+      "name": "DLTikTok",
+      "bundleIdentifier": "com.zhiliaoapp.musically",
+      "version": "33.9.1-2.0.5",
+      "versionDate": "2024-10-09",
+      "size": 241208135,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/DLTikTok/DLTikTok-33.9.1-2.0.5.ipa",
+      "developerName": "AppDB / CydiaAbdullah / KZStore* / nowesr1",
+      "localizedDescription": "Requires a license. TikTok, enhanced with features including no-watermark video saving, clear UI mode, no ads, etc.\nLast updated: 07-09-2024\nStatus: ✅",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.zhiliaoapp.musically.png",
+      "versions": [
+        {
+          "version": "33.9.1-2.0.5",
+          "date": "2024-10-09",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/DLTikTok/DLTikTok-33.9.1-2.0.5.ipa",
+          "size": 241208135
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Neoncat 130",
+  "identifier": "com.jamiewarner.neoncat.130",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-130.json",
+  "apps": [
+    {
+      "name": "InstaRocketPlus",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "310.0.4-3.8.18-2.5.0",
+      "versionDate": "2024-10-06",
+      "size": 135909810,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaRocketPlus/InstaRocketPlus-310.0.4-3.8.18-2.5.0.ipa",
+      "developerName": "CyPwn IPA Library / DPixel / DarkWebUser / Manpreet Singh @thisismanpreets",
+      "localizedDescription": "Instagram, injected with Rocket and Plus for Instagram cracked. If you use the friendship status checker, enable the one from Rocket settings. The one by Plus for Instagram is broken and will cause app crashes in newer versions of Instagram. To activate Rocket, follow these steps\nLast updated: 12-10-2023\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "310.0.4-3.8.18-2.5.0",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaRocketPlus/InstaRocketPlus-310.0.4-3.8.18-2.5.0.ipa",
+          "size": 135909810
+        }
+      ]
+    }
+  ]
+}

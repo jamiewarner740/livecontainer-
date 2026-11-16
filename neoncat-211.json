@@ -1,0 +1,26 @@
+{
+  "name": "Neoncat 211",
+  "identifier": "com.jamiewarner.neoncat.211",
+  "sourceURL": "https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/neoncat-211.json",
+  "apps": [
+    {
+      "name": "InstaRocketBH",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "315.1.2-3.8.20",
+      "versionDate": "2024-10-06",
+      "size": 137851643,
+      "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaRocketBH/InstaRocketBH-315.1.2-3.8.20.ipa",
+      "developerName": "zxcvbn's tweaked IPAs / BandarHL / SoCuul",
+      "localizedDescription": "Instagram, injected with Rocket Cracked (no ad banner, all features functional) and BH (new). List of BH's features . To activate Rocket, follow these steps. Note: This also includes a new tweak: \"IGReelHider\" made by zxcvbn.\nLast updated: 03-25-2024\nStatus: ⚠️",
+      "iconURL": "https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/icons/com.burbn.instagram.png",
+      "versions": [
+        {
+          "version": "315.1.2-3.8.20",
+          "date": "2024-10-06",
+          "downloadURL": "https://github.com/Neoncat-OG/TrollStore-IPAs/releases/download/InstaRocketBH/InstaRocketBH-315.1.2-3.8.20.ipa",
+          "size": 137851643
+        }
+      ]
+    }
+  ]
+}
