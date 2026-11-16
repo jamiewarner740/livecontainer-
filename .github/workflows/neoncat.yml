@@ -1,0 +1,71 @@
+name: Build LiveContainer sources
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/neoncat.yml'
+  schedule:
+    - cron: '17 6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: neoncat-sources
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and split source
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --output /tmp/neoncat.json https://raw.githubusercontent.com/Neoncat-OG/TrollStore-IPAs/main/apps_esign.json
+          python3 - <<'PY'
+          import json, pathlib, urllib.parse
+          data = json.loads(pathlib.Path('/tmp/neoncat.json').read_text())
+          apps = []
+          skipped = 0
+          for original in data['apps']:
+              a = dict(original)
+              url = a.get('downloadURL', '')
+              if not isinstance(url, str) or urllib.parse.urlsplit(url).scheme != 'https' or not urllib.parse.urlsplit(url).path.lower().endswith('.ipa'):
+                  skipped += 1
+                  continue
+              if not all(a.get(k) for k in ('name','bundleIdentifier','version','versionDate','iconURL','size')):
+                  skipped += 1
+                  continue
+              a['developerName'] = a.get('developerName') or 'Unknown'
+              a['localizedDescription'] = a.get('localizedDescription') or ''
+              a['versions'] = [{'version': a['version'], 'date': a['versionDate'], 'downloadURL': url, 'size': a['size']}]
+              apps.append(a)
+          if not apps:
+              raise RuntimeError('No valid IPA entries; refusing to overwrite sources')
+          base = 'https://raw.githubusercontent.com/jamiewarner740/livecontainer-/main/'
+          # Preserve upstream order and all separate builds, but avoid duplicate bundle IDs within each source.
+          pages = []
+          for a in apps:
+              for page in pages:
+                  if len(page) < 50 and all(x['bundleIdentifier'] != a['bundleIdentifier'] for x in page):
+                      page.append(a)
+                      break
+              else:
+                  pages.append([a])
+          for p in pathlib.Path('.').glob('neoncat-[0-9][0-9][0-9].json'):
+              p.unlink()
+          links = []
+          for i, page in enumerate(pages, 1):
+              filename = f'neoncat-{i:03}.json'
+              source = {'name': f'Neoncat {i:03}', 'identifier': f'com.jamiewarner.neoncat.{i:03}', 'sourceURL': base+filename, 'apps': page}
+              pathlib.Path(filename).write_text(json.dumps(source, ensure_ascii=False, indent=2)+'\n')
+              links.append(f'| {i:03} | {len(page)} | [JSON]({base+filename}) |')
+          pathlib.Path('SOURCES.md').write_text('# Neoncat sources for LiveContainer\n\nOriginal metadata and IPA links: [Neoncat](https://github.com/Neoncat-OG/TrollStore-IPAs). No IPA files are hosted here. Only install apps you have permission to use. Compatibility and download availability are not verified.\n\n'+f'{len(apps)} IPA listings across {len(pages)} sources; {skipped} excluded.\n\n| Source | Listings | URL |\n|---|---:|---|\n'+'\n'.join(links)+'\n')
+          print(f'{len(apps)} entries, {len(pages)} pages, {skipped} skipped')
+          PY
+      - name: Publish JSON files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh Neoncat LiveContainer sources'
+          git push
