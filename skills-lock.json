@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "infographic": {
+      "source": "remybroun/infographic",
+      "commit": "a6d76dba583f08ed7697e58ce1eefdb41bbaff38",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "667864f073f03f1784d5eb5c87f74d3ecacef02d81fc2ddf4fa386a65ef83e52"
+    }
+  }
+}

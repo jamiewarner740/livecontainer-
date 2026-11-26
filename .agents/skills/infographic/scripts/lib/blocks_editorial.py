@@ -1,0 +1,236 @@
+"""Editorial blocks: the prose, figures and framing that carry the argument.
+
+An infographic that is all charts explains nothing. These blocks are where the
+*claim* lives, the chart beside them is evidence. Most of them emit HTML rather
+than SVG so the text stays selectable, reflowable and searchable in the PDF.
+"""
+
+from __future__ import annotations
+
+import html
+import re
+
+from . import chrome, svg
+from .blocks_time import sparkline_svg
+from .theme import Ctx
+
+_INLINE = (
+    (re.compile(r"\*\*(.+?)\*\*"), r"<strong>\1</strong>"),
+    (re.compile(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])"), r"<em>\1</em>"),
+    (re.compile(r"`(.+?)`"), r"<code>\1</code>"),
+    (re.compile(r"\[(.+?)\]\((https?://[^)\s]+)\)"), r'<a href="\2">\1</a>'),
+)
+
+
+def inline(text) -> str:
+    """Escape first, then re-enable a tiny inline subset. Order matters: doing
+    it the other way round would let source text inject markup."""
+    out = html.escape(str(text or ""), quote=False)
+    for pattern, replacement in _INLINE:
+        out = pattern.sub(replacement, out)
+    return out
+
+
+def _paragraphs(text) -> str:
+    if isinstance(text, list):
+        chunks = [str(t) for t in text]
+    else:
+        chunks = [c for c in re.split(r"\n\s*\n", str(text or "")) if c.strip()]
+    return "".join(f"<p>{inline(c.strip())}</p>" for c in chunks)
+
+
+# ------------------------------------------------------------------- hero ----
+
+def hero(b: dict, ctx: Ctx) -> str:
+    """The cover. One idea, stated as a claim rather than a topic, "Retention
+    is a pricing problem" beats "Retention overview"."""
+    parts = []
+    if b.get("kicker"):
+        parts.append(f'<p class="ig-kicker">{inline(b["kicker"])}</p>')
+    parts.append(f'<h1 class="ig-hero-title">{inline(b.get("title", ""))}</h1>')
+    if b.get("subtitle"):
+        parts.append(f'<p class="ig-hero-subtitle">{inline(b["subtitle"])}</p>')
+    if b.get("lede"):
+        parts.append(f'<div class="ig-hero-lede">{_paragraphs(b["lede"])}</div>')
+    if b.get("stats"):
+        raise SystemExit(
+            "[build] hero `stats` was removed: a row of numbers under the title "
+            "is a table without the table. Lead with one `hero_figure` or "
+            "`stat`, and let the chart below prove it.")
+    meta = []
+    for key in ("author", "date", "source"):
+        if b.get(key):
+            meta.append(inline(b[key]))
+    if meta:
+        parts.append(f'<p class="ig-hero-meta">{" · ".join(meta)}</p>')
+    tone = b.get("tone", "plain")
+    return f'<header class="ig-hero ig-hero-{svg.esc(tone)}">{"".join(parts)}</header>'
+
+
+def section(b: dict, ctx: Ctx) -> str:
+    """A section opener. Numbers only when the sequence itself is information
+    the reader needs, never as decoration."""
+    parts = []
+    if b.get("number"):
+        parts.append(f'<span class="ig-section-number">{inline(b["number"])}</span>')
+    if b.get("kicker"):
+        parts.append(f'<p class="ig-kicker">{inline(b["kicker"])}</p>')
+    parts.append(f'<h2 class="ig-section-title">{inline(b.get("title", ""))}</h2>')
+    if b.get("lede"):
+        parts.append(f'<p class="ig-section-lede">{inline(b["lede"])}</p>')
+    return f'<div class="ig-section-head">{"".join(parts)}</div>'
+
+
+def heading(b: dict, ctx: Ctx) -> str:
+    level = int(b.get("level", 3))
+    return f'<h{level} class="ig-heading">{inline(b.get("text", b.get("title", "")))}</h{level}>'
+
+
+def prose(b: dict, ctx: Ctx) -> str:
+    body = _paragraphs(b.get("text", b.get("body", "")))
+    cls = "ig-prose ig-prose-lead" if b.get("lead") else "ig-prose"
+    if b.get("columns", 1) > 1:
+        cls += f" ig-cols-{int(b['columns'])}"
+    return f'<div class="{cls}">{body}</div>'
+
+
+def bullets(b: dict, ctx: Ctx) -> str:
+    tag = "ol" if b.get("ordered") else "ul"
+    items = "".join(f"<li>{inline(i)}</li>" for i in b.get("items", []))
+    return f'<{tag} class="ig-bullets">{items}</{tag}>'
+
+
+def quote(b: dict, ctx: Ctx) -> str:
+    attribution = (f'<footer class="ig-quote-attr">{inline(b["attribution"])}</footer>'
+                   if b.get("attribution") else "")
+    return (f'<blockquote class="ig-quote"><p>{inline(b.get("text", ""))}</p>'
+            f"{attribution}</blockquote>")
+
+
+def callout(b: dict, ctx: Ctx) -> str:
+    """One of: key, note, warn, danger. The tone maps to a status color and an
+    icon, never to color alone."""
+    tone = b.get("tone", "key")
+    # Four marks, four shapes. They used to be reversed out of a coloured disc,
+    # where "!" could serve both warn and danger because the disc carried the
+    # hue; drawn as bare marks they have to differ in shape or the severity is
+    # riding on colour alone, which is the one thing this block promises not to
+    # do.
+    icons = {"key": "◆", "note": "●", "warn": "!", "danger": "✕"}
+    title = (f'<p class="ig-callout-title">{inline(b["title"])}</p>' if b.get("title") else "")
+    return (f'<aside class="ig-callout ig-callout-{svg.esc(tone)}">'
+            f'<span class="ig-callout-icon" aria-hidden="true">{svg.esc(icons.get(tone, "◆"))}</span>'
+            f'<div>{title}{_paragraphs(b.get("text", ""))}</div></aside>')
+
+
+# ------------------------------------------------------------------ stats ----
+
+def _delta_html(item, ctx: Ctx):
+    if item.get("delta") is None:
+        return ""
+    value = float(item["delta"])
+    up_is_good = item.get("up_is_good", True)
+    good = (value >= 0) == bool(up_is_good)
+    arrow = "↑" if value > 0 else ("↓" if value < 0 else "→")
+    cls = "up" if good else "down"
+    unit = item.get("delta_unit", "%")
+    period = f' <span class="ig-delta-period">{inline(item["delta_period"])}</span>' \
+        if item.get("delta_period") else ""
+    # The arrow carries direction, so the number is an unsigned magnitude. Doing
+    # both invites "↓ +14.2%", where the glyph and the sign contradict each
+    # other and the reader has to guess which one is lying.
+    decimals = int(item.get("delta_decimals", 1))
+    magnitude = f"{abs(value):.{decimals}f}".rstrip("0").rstrip(".")
+    return (f'<span class="ig-delta ig-delta-{cls}">{svg.esc(arrow)} '
+            f'{svg.esc(magnitude + unit)}</span>{period}')
+
+
+def stat(b: dict, ctx: Ctx) -> str:
+    """label · value · optional delta · optional sparkline. The number IS the
+    chart, never draw a one-bar bar chart instead of this."""
+    t = ctx.theme
+    value = b.get("value")
+    if isinstance(value, (int, float)):
+        # `compact` is opt-in, as catalog/README.md documents it. It used to
+        # default on, which silently turned an author's 8,231 into "8.2K": a
+        # real, readable count replaced by a rounder one nobody asked for. A
+        # figure the reader can cite beats a figure that fits.
+        text = svg.fmt_compact(value, int(b.get("decimals", 1)), b.get("currency", ""),
+                               b.get("unit", "")) if b.get("compact", False) \
+            else svg.fmt_plain(value,
+                               int(b.get("decimals", svg.natural_decimals(value))),
+                               b.get("currency", ""), b.get("unit", ""))
+    else:
+        text = str(value if value is not None else ", ")
+    spark = ""
+    if b.get("trend"):
+        spark = f'<div class="ig-spark">{sparkline_svg(b["trend"], ctx, color=t.accent)}</div>'
+    note = f'<p class="ig-stat-note">{inline(b["note"])}</p>' if b.get("note") else ""
+
+    # Fit the figure to the tile in Python rather than hoping CSS copes. A value
+    # that does not fit must get SMALLER, never wrap: `overflow-wrap` on a big
+    # number stacks it one character per line, which is the worst of both.
+    base = float(ctx.opt("stat_size", 30.8))
+    available = max(ctx.width - 40.0, 40.0)
+    size = base
+    while size > 13.0 and svg.text_width(text, size, 650) > available:
+        size -= 1.0
+    style = f' style="font-size:{svg.num(size)}px"' if size < base - 0.5 else ""
+
+    return (f'<div class="ig-stat">'
+            f'<p class="ig-stat-label">{inline(b.get("label", ""))}</p>'
+            f'<p class="ig-stat-value"{style}>{svg.esc(text)}</p>'
+            f'<p class="ig-stat-delta">{_delta_html(b, ctx)}</p>'
+            f"{spark}{note}</div>")
+
+
+def hero_figure(b: dict, ctx: Ctx) -> str:
+    """The single number a page leads with. Exactly one per view, in the same
+    sans as everything else, a serif here reads as off-brand decoration."""
+    value = b.get("value")
+    text = svg.fmt_compact(value, int(b.get("decimals", 1)), b.get("currency", ""),
+                           b.get("unit", "")) if isinstance(value, (int, float)) else str(value)
+    note = f'<p class="ig-hero-figure-note">{inline(b["note"])}</p>' if b.get("note") else ""
+    return (f'<div class="ig-hero-figure">'
+            f'<p class="ig-hero-figure-value">{svg.esc(text)}</p>'
+            f'<p class="ig-hero-figure-label">{inline(b.get("label", ""))}</p>'
+            f"{note}</div>")
+
+
+# ------------------------------------------------------------------ table ----
+
+def table(b: dict, ctx: Ctx) -> str:
+    columns = [str(c) for c in b.get("columns", [])]
+    rows = [[("" if c is None else c) for c in row] for row in b.get("rows", [])]
+    return chrome.table_html(columns, rows, b.get("align"), b.get("caption"),
+                             cls="ig-table")
+
+
+def image(b: dict, ctx: Ctx) -> str:
+    caption = f'<figcaption>{inline(b["caption"])}</figcaption>' if b.get("caption") else ""
+    fit = b.get("fit", "cover")
+    ratio = b.get("ratio", "16/9")
+    return (f'<figure class="ig-image" style="aspect-ratio:{svg.esc(ratio)}">'
+            f'<img src="{svg.esc(b.get("src", ""))}" alt="{svg.esc(b.get("alt", ""))}" '
+            f'style="object-fit:{svg.esc(fit)}"/>{caption}</figure>')
+
+
+def footnotes(b: dict, ctx: Ctx) -> str:
+    items = "".join(f"<li>{inline(i)}</li>" for i in b.get("items", []))
+    title = f'<p class="ig-footnotes-title">{inline(b.get("title", "Sources & method"))}</p>'
+    return f'<div class="ig-footnotes">{title}<ol>{items}</ol></div>'
+
+
+def divider(b: dict, ctx: Ctx) -> str:
+    return '<hr class="ig-divider"/>'
+
+
+def spacer(b: dict, ctx: Ctx) -> str:
+    return f'<div class="ig-spacer" style="height:{float(b.get("height", 24))}px"></div>'
+
+
+def raw(b: dict, ctx: Ctx) -> str:
+    """Escape hatch for anything the catalog does not cover. Use it rarely and
+    only after checking the catalog, an unregistered one-off cannot be
+    re-themed, validated, or given a table view."""
+    return str(b.get("html", ""))

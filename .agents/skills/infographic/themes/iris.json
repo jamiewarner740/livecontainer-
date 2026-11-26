@@ -1,0 +1,131 @@
+{
+  "name": "iris",
+  "label": "infographic house theme, clay and blue",
+  "note": "The house theme, taken from branding/. Page is the mark's cream ground and the accent is its clay. The two sequential ramps are the mark's own two hue angles, 39.9 and 251.1 in OKLCH, which is why a ramp in this theme and the logo beside it are the same colour. Their chroma rises to a plateau and stays there, so the dark end of a ramp is the most saturated part of it and not a grey; what limits it is the sRGB gamut. Diverging runs blue to clay, the same inversion the mark is built on. Status is drawn from the theme's own families, never from outside: good is the green slot, warning is the gold slot, and serious and critical are two steps down one crimson, 36 degrees clear of the accent so an error can never paint itself in the house colour. The eight categorical slots are NOT the brand: a chart needs eight separable identities and the brand has two, so the remaining six were found by search, keeping a 36 degree minimum hue gap, maximising the worst pair ANYWHERE under colour-vision simulation rather than the worst adjacent pair, and holding a lightness spread across the first three, which are the ones a scatter puts side by side. Worst pair anywhere is 5.9 dE, worst adjacent 13.4. This theme needs no waiver. Re-run validate_theme.py after any edit.",
+  "surface": {
+    "page": "#F2EFE6",
+    "card": "#FBFAF5",
+    "sunken": "#E9E4D6",
+    "inverse": "#1F1D1A"
+  },
+  "ink": {
+    "primary": "#1F1D1A",
+    "secondary": "#46413A",
+    "muted": "#655F54",
+    "inverse": "#F2EFE6",
+    "on_fill_light": "#1F1D1A",
+    "on_fill_dark": "#FFFFFF",
+    "accent_text": "#893411"
+  },
+  "rule": {
+    "grid": "#E0DACA",
+    "axis": "#D0C9B6",
+    "border": "#D0C9B6",
+    "hairline": "#E0DACA"
+  },
+  "series": [
+    "#B66346",
+    "#065494",
+    "#8E78E2",
+    "#9C2752",
+    "#B17F00",
+    "#0095AB",
+    "#4C5A00",
+    "#008C5F"
+  ],
+  "series_names": [
+    "clay",
+    "navy",
+    "violet",
+    "crimson",
+    "gold",
+    "cyan",
+    "olive",
+    "green"
+  ],
+  "deemphasis": "#98907F",
+  "accent": "#B66346",
+  "sequential": {
+    "hue": "clay",
+    "steps": [
+      "#F9EDE9",
+      "#F8D5C8",
+      "#F6BCA8",
+      "#F1A489",
+      "#E98B6B",
+      "#E0734C",
+      "#D05E34",
+      "#BD4D21",
+      "#A54017",
+      "#8D3512",
+      "#752B0D",
+      "#5E2007",
+      "#481704"
+    ],
+    "ordinal_steps": [
+      "#E3754D",
+      "#CA592F",
+      "#AC4319",
+      "#893411",
+      "#682509"
+    ]
+  },
+  "sequential_alt": {
+    "hue": "navy",
+    "steps": [
+      "#E9F1FA",
+      "#C9E0FA",
+      "#A9CFFA",
+      "#89BEF8",
+      "#6AACF3",
+      "#499AED",
+      "#2D88DE",
+      "#1F77C7",
+      "#1A67AD",
+      "#145793",
+      "#0E477B",
+      "#093863",
+      "#052A4C"
+    ],
+    "ordinal_steps": [
+      "#4A9CEF",
+      "#2783D9",
+      "#1C6BB4",
+      "#135490",
+      "#0B3E6D"
+    ]
+  },
+  "diverging": {
+    "low": "#065494",
+    "low_soft": "#A8C6E4",
+    "mid": "#EAE5D9",
+    "high_soft": "#E0B49E",
+    "high": "#B66346"
+  },
+  "status": {
+    "good": "#008C5F",
+    "warning": "#B17F00",
+    "serious": "#BC426B",
+    "critical": "#9C2752",
+    "good_text": "#1F7B56",
+    "warning_text": "#8B661B",
+    "critical_text": "#A9305B"
+  },
+  "type": {
+    "sans": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", system-ui, sans-serif",
+    "display": "\"Instrument Serif\", Georgia, \"Times New Roman\", serif",
+    "mono": "ui-monospace, SFMono-Regular, Menlo, monospace",
+    "display_weight": 400,
+    "display_tracking": "-0.005em",
+    "block_title": "display",
+    "heading_case": "none"
+  },
+  "geometry": {
+    "radius": 3,
+    "bar_max_thickness": 24,
+    "line_width": 2,
+    "marker_radius": 4.5,
+    "surface_gap": 2,
+    "hairline": 1
+  }
+}
