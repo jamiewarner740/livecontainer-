@@ -1,0 +1,261 @@
+<title>H&amp;H Outlet Site Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+<style>
+/* Layout: single reading column (~72ch) with a wide scorecard and screenshot strip; findings as severity-tagged rows. */
+:root{
+  --bg:#f6f5f2; --surface:#ffffff; --fg:#1c1b19; --muted:#615d55; --line:#e2dfd8;
+  --accent:#a77b12; --accent-soft:#f4ead0;
+  --crit:#b42318; --crit-bg:#fdecea; --high:#b54708; --high-bg:#fef0e4; --med:#8a6d00; --med-bg:#fbf5d9; --low:#3d6b4f; --low-bg:#e8f2ec;
+  --display:"Fraunces",Georgia,serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141311; --surface:#1d1c19; --fg:#ece9e2; --muted:#a39e93; --line:#33312c;
+  --accent:#e0b44a; --accent-soft:#3a3120;
+  --crit:#ff8a80; --crit-bg:#3d1d1a; --high:#ffb37a; --high-bg:#3b2617; --med:#f0cf5a; --med-bg:#363016; --low:#8fd0a8; --low-bg:#1c3226; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141311; --surface:#1d1c19; --fg:#ece9e2; --muted:#a39e93; --line:#33312c;
+  --accent:#e0b44a; --accent-soft:#3a3120;
+  --crit:#ff8a80; --crit-bg:#3d1d1a; --high:#ffb37a; --high-bg:#3b2617; --med:#f0cf5a; --med-bg:#363016; --low:#8fd0a8; --low-bg:#1c3226; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:980px;margin:0 auto;padding-block:48px 80px;display:flex;flex-direction:column;gap:56px}
+.col{max-width:72ch}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font:700 clamp(2rem,5vw,3.1rem)/1.1 var(--display);letter-spacing:-.01em}
+h2{font:600 1.65rem/1.2 var(--display);margin-bottom:6px}
+h3{font-size:1.02rem;font-weight:600;line-height:1.35}
+p{margin:0}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:1.15rem;color:var(--fg);margin-top:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:20px;font:400 .8rem/1.4 var(--mono);color:var(--muted)}
+.meta b{color:var(--fg);font-weight:500}
+section{display:flex;flex-direction:column;gap:18px}
+.sub{color:var(--muted)}
+a{color:var(--accent)}
+code{font:400 .86em var(--mono);background:var(--accent-soft);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+
+.verdict{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.verdict p{max-width:72ch}
+
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.score div{background:var(--surface);padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.score .k{font:500 .72rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.score .v{display:flex;align-items:baseline;gap:8px}
+.score .g{font:700 1.6rem/1 var(--display)}
+.score .n{font-size:.85rem;color:var(--muted)}
+.g.F,.g.D{color:var(--crit)} .g.C{color:var(--high)} .g.B{color:var(--low)}
+
+.pill{display:inline-block;font:500 .68rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border-radius:4px;white-space:nowrap}
+.crit{color:var(--crit);background:var(--crit-bg)} .high{color:var(--high);background:var(--high-bg)} .med{color:var(--med);background:var(--med-bg)} .low{color:var(--low);background:var(--low-bg)}
+
+.top5{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;counter-reset:t}
+.top5 li{counter-increment:t;display:grid;grid-template-columns:2.2rem 1fr;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.top5 li::before{content:counter(t);font:700 1.4rem/1 var(--display);color:var(--accent)}
+.top5 li > div{min-width:0;display:flex;flex-direction:column;gap:4px}
+.top5 p{color:var(--muted)}
+
+.finds{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.f{display:grid;grid-template-columns:5.5rem 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.f > div{min-width:0;display:flex;flex-direction:column;gap:4px}
+.f p{color:var(--muted);font-size:.95rem}
+.f .fix{color:var(--fg)}
+.f .fix::before{content:"Rebuild: ";font-weight:600;color:var(--accent)}
+@media (max-width:560px){.f{grid-template-columns:1fr;gap:6px}}
+
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+figure img{width:100%;max-width:100%;max-height:420px;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:8px;background:#0a0a0a}
+figcaption{font-size:.85rem;color:var(--muted)}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.92rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.85rem;white-space:nowrap}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:6px}
+.card li{color:var(--muted)} .card li b{color:var(--fg);font-weight:600}
+
+.phase{display:flex;flex-direction:column;gap:12px}
+.phase .row{display:grid;grid-template-columns:8rem 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.phase .row > div{min-width:0}
+.phase .when{font:500 .78rem/1.5 var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.phase ul{margin:0;padding-left:1.1rem;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+@media (max-width:560px){.phase .row{grid-template-columns:1fr;gap:4px}}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--line);padding-left:14px}
+</style>
+
+<main>
+  <header class="col">
+    <div class="eyebrow">Pre-rebuild audit</div>
+    <h1 style="margin-top:12px">H&amp;H Outlet (hisnhersllc.com)</h1>
+    <p class="lede">A pallet-liquidation store with a capable back office and a storefront that doesn't sell yet. Shoppers can't buy without a Replit account, the catalog has nine items with no descriptions or categories, and the luxury-boutique styling doesn't fit $5 bargain pricing.</p>
+    <div class="meta"><span>Audited <b>27 Nov 2026</b></span><span>Last deploy <b>5 Aug 2026</b></span><span>Pages checked <b>15 public routes</b>, desktop + mobile</span></div>
+  </header>
+
+  <section>
+    <div class="verdict">
+      <div class="eyebrow">Verdict</div>
+      <p><b>Rebuild the storefront and keep the operations ideas.</b> The admin side (barcode scanning, UPC lookup, Shippo labels, Square refunds, low-stock alerts) is well thought out and fits how a liquidation store works. The customer side has a few things that block sales outright. The first is the sign-in wall: it sends shoppers to Replit to make an account. The others are an empty homepage, no categories, and product photos that are screenshots of Amazon listings. None of the storefront code needs to be kept.</p>
+    </div>
+    <div class="score" role="list">
+      <div role="listitem"><span class="k">Conversion / checkout</span><span class="v"><span class="g F">F</span><span class="n">login wall, no guest checkout</span></span></div>
+      <div role="listitem"><span class="k">Catalog &amp; content</span><span class="v"><span class="g D">D</span><span class="n">9 items, 0 descriptions</span></span></div>
+      <div role="listitem"><span class="k">Performance</span><span class="v"><span class="g D">D</span><span class="n">~13 MB product grid</span></span></div>
+      <div role="listitem"><span class="k">SEO &amp; local search</span><span class="v"><span class="g D">D</span><span class="n">empty HTML, no address</span></span></div>
+      <div role="listitem"><span class="k">Accessibility</span><span class="v"><span class="g C">C</span><span class="n">zoom blocked, unlabeled icons</span></span></div>
+      <div role="listitem"><span class="k">Brand &amp; copy</span><span class="v"><span class="g C">C</span><span class="n">polished but off-message</span></span></div>
+      <div role="listitem"><span class="k">Trust &amp; legal</span><span class="v"><span class="g C">C</span><span class="n">policies exist, claims don't hold</span></span></div>
+      <div role="listitem"><span class="k">Back office</span><span class="v"><span class="g B">B</span><span class="n">strong feature set</span></span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col"><h2>Fix these first</h2><p class="sub">These five problems cost the most sales. Each one is a requirement for the rebuild.</p></div>
+    <ol class="top5">
+      <li><div><h3>You can't buy without making a Replit account</h3><p>The cart, checkout and favorites all say “Sign in”, and the login page says “Secure authentication provided via Replit.” A shopper with a $5 item in mind has to sign up with a developer platform they've never heard of. There's no guest checkout. This alone could explain zero online sales.</p></div></li>
+      <li><div><h3>The homepage shows no products</h3><p>The featured-products and categories lists both come back empty, so the homepage is two hero banners, a marquee and a footer. The Categories page reads “No Divisions Found. We are currently reorganizing our archives.”</p></div></li>
+      <li><div><h3>Product photos are screenshots of Amazon listings</h3><p>Several images include Amazon's interface: “Hear the highlights 1:50”, “prime business”, color swatches and share icons. They're also cropped phone screenshots (1080×2410). This looks untrustworthy, and it uses another retailer's images and content.</p></div></li>
+      <li><div><h3>No store address, hours or map</h3><p>The site's own fallback text says “visit us in store”, but no page gives a location. Contact says only “Based in United States.” Liquidation stores depend on local foot traffic and “near me” searches, so this is the biggest missed opportunity.</p></div></li>
+      <li><div><h3>Copy promises a different business</h3><p>The trust badges say “Global Delivery”, “Authentic · Verified Quality”, “Premium · Highest Standards” and “Exclusive · Limited Drops.” Checkout asks you to “finalize your acquisition”, and categories are “The Archives.” For untested pallet stock at 70–86% off, this sets the wrong expectations. “Global” also contradicts the shipping policy.</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="col"><h2>What it looks like today</h2></div>
+    <div class="shots">
+      <figure><img src="screenshots/shot-home.jpg" alt="Desktop homepage: black and gold hero reading Endless Finds Await, a gold marquee, four badges, and a second hero, with no products shown"><figcaption>Homepage, desktop. Two heroes and no products.</figcaption></figure>
+      <figure><img src="screenshots/shot-products.jpg" alt="Product grid of nine items, each tagged SALE, several showing Amazon app interface elements in the photo"><figcaption>The full catalog: nine items, all marked “SALE.”</figcaption></figure>
+      <figure><img src="screenshots/shot-pdp.jpg" alt="Product page for yoga pants with a screenshot image showing Hear the highlights 1:50 and Color: Black Foil Pattern"><figcaption>Product page. Amazon's interface is in the photo, there's no description, and the stock text is hard to read.</figcaption></figure>
+      <figure><img src="screenshots/shot-mobile.jpg" alt="Mobile homepage where an Add to Home Screen popup covers the Explore Collection button"><figcaption>Mobile. The install prompt covers the main button on the first visit.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="col"><h2>All findings</h2><p class="sub">Grouped by area. Each finding ends with what the rebuild should do about it.</p></div>
+
+    <h3>Conversion &amp; checkout</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill crit">Critical</span></span><div><h3>Third-party login required for cart and checkout</h3><p>Every customer account goes through Replit Auth (<code>/api/login</code>), with no email or password and no social login.</p><p class="fix">Guest checkout by default, with an optional account created after purchase.</p></div></div>
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>“Quick add” and favorites also hit the login wall</h3><p>Browsing works when signed out, but every action that commits to buying needs an account first.</p><p class="fix">Keep the cart in the browser (or on the server, tied to a session) with no login needed.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>The free-shipping threshold is buried</h3><p>“Free shipping on orders over $150” only appears in the shipping policy. Local pickup exists in checkout but isn't mentioned anywhere else.</p><p class="fix">Put the free-shipping threshold and free local pickup in the header bar and on product pages.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Footer shows payment badges that may not be offered</h3><p>Apple Pay, Visa, Mastercard and Amex badges are in the footer, but checkout code only renders a card form. Admin has an Apple Pay domain setting, so check whether it's active.</p><p class="fix">Show only the payment methods checkout actually supports.</p></div></div>
+      <div class="f"><span><span class="pill low">Low</span></span><div><h3>“New Arrivals” link does nothing different</h3><p>The footer links to <code>?sort=newest</code>, but the product page reads <code>sortBy</code>. So it shows the same list as “Shop All.”</p><p class="fix">Make New Arrivals a real filter, for example items added in the last 7 days.</p></div></div>
+    </div>
+
+    <h3>Catalog &amp; content</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill crit">Critical</span></span><div><h3>Nine products, all added on one day</h3><p>Product IDs 5–13 were all created on 4 Aug 2026, and the site hasn't been deployed since 5 Aug. All nine have no description, no category and none are featured. That contradicts the tagline “new inventory dropping constantly.”</p><p class="fix">Listing a product has to take under a minute from a phone. Keep the barcode-to-listing flow and make category a required field.</p></div></div>
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>Every item is “SALE” with an unexplained compare-at price</h3><p>For example, $5.00 shown against $34.99 as “86% OFF.” If those are MSRPs, the label should say so. Unsupported “was” prices are a consumer-protection risk.</p><p class="fix">Label it “Est. retail $34.99” with a short note on where retail prices come from. Save “Sale” for actual markdowns.</p></div></div>
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>No condition information</h3><p>Liquidation stock can be new, open-box, used or untested, and shoppers need to know which.</p><p class="fix">Add a condition field (New / Open box / Like new / As-is) shown as a badge, plus a clear as-is and returns note.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Messy product names</h3><p>Examples: trailing spaces, “Kids: Age: 8-10 gloves”, inconsistent capitalization, and sizes inside titles (“size Large”).</p><p class="fix">Use a naming pattern (Brand + Item + key spec), and put size and color in their own fields.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>No reviews or social proof anywhere</h3><p>The review feature exists but has zero reviews. The site doesn't show Instagram or Facebook content or in-store photos.</p><p class="fix">Embed real in-store and pallet-unboxing photos, and link to Google reviews once a Business Profile exists.</p></div></div>
+    </div>
+
+    <h3>Performance</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>The product grid downloads about 13 MB</h3><p>Product photos are served at full phone resolution (1080×2410 up to 3072×4080, 0.5–1.8 MB each) for roughly 300 px cards. On mobile data, that's very slow.</p><p class="fix">Use an image CDN or build-time resizing to serve WebP/AVIF at 400 and 800 px with <code>srcset</code>, and lazy-load below the fold.</p></div></div>
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>The logo is a 1.6 MB PNG and loads twice</h3><p><code>logo.png</code> is 1254×1254 but displays at about 40 px in the header and footer. The favicon is 199 KB, and the share image is a 765 KB 16-bit PNG.</p><p class="fix">Use an SVG logo, a 32/180 px favicon set, and an ~80 KB JPEG share image.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Blank page until about 400 KB of JavaScript runs</h3><p>It's a client-rendered React app with about 400 KB of JS before code-split pages, and the first screen depends on several API calls.</p><p class="fix">Pre-render or server-render pages so the HTML arrives with content.</p></div></div>
+    </div>
+
+    <h3>SEO &amp; local search</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>Search engines get an empty page</h3><p>The HTML is an empty <code>&lt;div id="root"&gt;</code> plus a <code>&lt;noscript&gt;</code> blurb. Product names, prices and descriptions only exist after JavaScript runs.</p><p class="fix">Server-render or pre-render pages, and add Product, Offer and LocalBusiness structured data.</p></div></div>
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>Sitemap lists private pages and no products</h3><p><code>sitemap.xml</code> lists <code>/cart</code>, <code>/profile</code> and <code>/orders</code>, but no product URLs.</p><p class="fix">Generate the sitemap automatically from active products and categories, and keep account pages out of it.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Every page has the same meta description</h3><p>Some titles repeat the brand twice (“Contact — H&amp;H Outlet — H&amp;H Outlet”), and cart, checkout and orders use the homepage title.</p><p class="fix">Give each page its own title and description. Product pages should include name, price and condition.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Missing pages return status 200</h3><p><code>/nope-404</code> shows a “Lost in the Collection” page but returns HTTP 200, so search engines can index junk URLs.</p><p class="fix">Return a real 404 status. Redirect sold-out products to their category.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>No analytics at all</h3><p>No Google Analytics, Meta Pixel or any other tracking was loaded. There's no way to tell what's working.</p><p class="fix">Add privacy-friendly analytics (GA4, Plausible or PostHog) and a Meta Pixel if they run ads.</p></div></div>
+    </div>
+
+    <h3>Accessibility</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>Pinch-zoom is blocked</h3><p>The viewport tag sets <code>maximum-scale=1</code>, so low-vision shoppers can't zoom in on mobile. This fails WCAG 1.4.4.</p><p class="fix">Remove <code>maximum-scale</code>.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Icon buttons have no labels</h3><p>The products page has 11 buttons with no accessible name (favorite, share, menu), and the catalog search input has no label.</p><p class="fix">Add <code>aria-label</code>s and visible labels on form fields.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Low-contrast text</h3><p>“In stock (50 available)” is dark grey on black. A lot of UI text is 10–11 px uppercase with wide letter-spacing.</p><p class="fix">Body text should be at least 4.5:1 contrast and 14 px.</p></div></div>
+      <div class="f"><span><span class="pill low">Low</span></span><div><h3>Some pages have no H1</h3><p>Cart, favorites, checkout, profile and orders have no H1 when you're signed out.</p><p class="fix">Give every page exactly one H1.</p></div></div>
+    </div>
+
+    <h3>Brand, design &amp; trust</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill high">High</span></span><div><h3>Three names in use</h3><p>“His &amp; Hers” (header), “H&amp;H Outlet” (titles, hero) and “His &amp; Hers LLC” (legal) are all used. The domain is <code>hisnhersllc.com</code>.</p><p class="fix">Pick one shopper-facing name (we'd suggest “H&amp;H Outlet”) and use the LLC name only in legal text.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Contact email looks personal</h3><p>The public address is <code>abcottie13@hisnhersllc.com</code>, which looks like a personal handle. There's no phone number.</p><p class="fix">Set up <code>hello@</code> and <code>orders@</code> aliases, and add a phone or text number.</p></div></div>
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Install prompt covers the main button on mobile</h3><p>The “Add to Home Screen” popup appears on the first visit and sits over “Explore Collection.”</p><p class="fix">Drop the prompt, or show it only after a purchase or a third visit.</p></div></div>
+      <div class="f"><span><span class="pill low">Low</span></span><div><h3>Duplicate hero and filler marquee</h3><p>The homepage has two near-identical taglines plus a repeating marquee of six phrases.</p><p class="fix">Replace them with “This week's drop”, shop by category, visit the store, and how pallet pricing works.</p></div></div>
+      <div class="f"><span><span class="pill low">Low</span></span><div><h3>Legal pages are generic</h3><p>Terms set governing law as “the laws of the United States” with no state. Returns allow 14 days but don't say how as-is items are handled.</p><p class="fix">Name the state and add a plain-English returns section for liquidation stock. Have someone qualified review it.</p></div></div>
+    </div>
+
+    <h3>Technical &amp; security</h3>
+    <div class="finds">
+      <div class="f"><span><span class="pill med">Medium</span></span><div><h3>Depends on Replit hosting</h3><p>Hosting, login and file storage all run on Replit (<code>his-and-hers-llc.replit.app</code>). Images load through <code>/api/storage/objects//objects/…</code> (note the double slash) and redirect to signed URLs, so they can't be cached well.</p><p class="fix">Use standard hosting with a CDN for images, and export the product data and photos before switching.</p></div></div>
+      <div class="f"><span><span class="pill low">Low</span></span><div><h3>Every page logs a console error</h3><p><code>/api/auth/user</code> returns 401 for every signed-out visitor and shows up as an error. It's harmless but clutters error tracking.</p><p class="fix">Return 200 with <code>null</code> for signed-out visitors.</p></div></div>
+      <div class="f"><span><span class="pill low">Low</span></span><div><h3>Positives to keep</h3><p>HTTPS with HSTS. Card entry uses Square's hosted fields, so card data never touches the site (simplest PCI scope). Shipping, privacy and terms pages exist. Order tracking links work for USPS, UPS, FedEx and DHL.</p><p class="fix">Keep Square and these policies.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col"><h2>What exists today</h2><p class="sub">Features found in the live code. Use this as the checklist so the rebuild doesn't lose anything the owner relies on.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Area</th><th>Current feature</th><th>Built on</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>Payments</td><td>Card checkout, saved cards, full refunds from admin</td><td>Square Web Payments SDK</td><td>Keep, and add Apple Pay / Google Pay if Square has them enabled</td></tr>
+        <tr><td>Shipping</td><td>Live rates at checkout, buy and reprint labels, package dimensions, free local pickup</td><td>Shippo</td><td>Keep and promote pickup</td></tr>
+        <tr><td>Listing tools</td><td>Barcode scanner, UPC lookup, photo-based item ID, camera upload</td><td>ZXing, UPCitemdb (trial tier), Open Food Facts</td><td>Keep. Move UPC lookup off the trial tier, which has a daily limit</td></tr>
+        <tr><td>Inventory</td><td>Inline stock edits, low-stock list, activate/deactivate, featured flag, weight</td><td>Custom admin</td><td>Keep and add a condition field</td></tr>
+        <tr><td>Orders</td><td>Statuses (pending → shipped/picked up/refunded), tracking numbers</td><td>Custom admin</td><td>Keep</td></tr>
+        <tr><td>Reporting</td><td>Sales chart, revenue by category, recent orders, subscribers</td><td>Recharts</td><td>Keep</td></tr>
+        <tr><td>Staff</td><td>Roles: Owner, Manager, Customer</td><td>Replit Auth</td><td>Keep the roles and replace the login provider</td></tr>
+        <tr><td>Email</td><td>Order confirmation and shipping notification, with a test-send button</td><td>Gmail</td><td>Move to a transactional email service (Resend, Postmark) for deliverability</td></tr>
+        <tr><td>Customer</td><td>Favorites, reviews, order history, profile, newsletter, contact form</td><td>Custom</td><td>Keep, with no login needed to browse or buy</td></tr>
+        <tr><td>Shell</td><td>Installable app (PWA) with install prompt</td><td>Web manifest</td><td>Keep the manifest and drop the pop-up</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="col"><h2>Recommended rebuild</h2></div>
+    <div class="two">
+      <div class="card"><h3>Option A · Shopify (fastest)</h3><ul>
+        <li><b>Good fit if</b> the owner wants to run it alone with no developer.</li>
+        <li>Guest checkout, Shop Pay, Apple Pay, SEO, sitemaps and reviews come built in.</li>
+        <li>Shopify POS can replace Square for in-store sales so inventory stays in sync.</li>
+        <li><b>Trade-off:</b> about $39+/mo plus apps, and the custom barcode-to-listing flow becomes an app or a manual step.</li>
+      </ul></div>
+      <div class="card"><h3>Option B · Custom rebuild (keeps the admin)</h3><ul>
+        <li><b>Good fit if</b> the scan-to-list workflow is the main reason they built it.</li>
+        <li>Server-rendered storefront (Next.js or Astro), Postgres, an image CDN and email-link login.</li>
+        <li>Keep Square, Shippo and the admin features above, and connect to Square POS inventory.</li>
+        <li><b>Trade-off:</b> someone has to maintain it.</li>
+      </ul></div>
+    </div>
+
+    <div class="phase">
+      <div class="row"><div class="when">Must-have</div><div><ul>
+        <li>Guest checkout, a persistent cart with no login, and one clear brand name</li>
+        <li>Store address, hours, map and phone on every page, plus a Google Business Profile</li>
+        <li>Homepage that leads with this week's arrivals and shop by category</li>
+        <li>Real product photos, a condition badge, “Est. retail” price labels and short descriptions</li>
+        <li>Resized images, an SVG logo and server-rendered pages</li>
+      </ul></div></div>
+      <div class="row"><div class="when">Next</div><div><ul>
+        <li>Product and LocalBusiness structured data, a product sitemap and correct 404s</li>
+        <li>Analytics plus Meta Pixel, and newsletter sign-up connected to an email tool</li>
+        <li>“Drop day” announcements tied to Instagram and Facebook posts</li>
+        <li>Phone-friendly listing flow: scan, take a photo, set price and condition, publish</li>
+      </ul></div></div>
+      <div class="row"><div class="when">Later</div><div><ul>
+        <li>Hold for in-store pickup, and pallet or bulk sales for resellers</li>
+        <li>Review requests after pickup or delivery</li>
+      </ul></div></div>
+    </div>
+  </section>
+
+  <section class="col">
+    <h2>How this was checked</h2>
+    <p class="note">Every public page was loaded in a headless Chrome browser at desktop (1440 px) and iPhone 13 sizes. I recorded the network requests, console errors, page text, image sizes and basic accessibility checks, and read the site's public JavaScript to list features and integrations. Nothing was purchased. Account and admin pages were seen only in their signed-out state, and admin access controls weren't tested. Before launch, confirm product counts, order volume and which payment methods are enabled with the owner in the admin dashboard.</p>
+  </section>
+</main>
