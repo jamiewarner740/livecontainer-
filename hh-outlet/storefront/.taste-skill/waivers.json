@@ -1,0 +1,4 @@
+[
+  {"check": "contrast", "target": "ul.rows > li:nth-of-type(1) > span.rows__name > a.link", "reason": "Measured while the row passes under the kit's required phone action bar (nav.actionbar, fixed at the foot); the crop shows the bar's own button over the row. Uncovered, the link is #1c6234 on #f8f8f8 at 6.95:1."},
+  {"check": "scroll-reveal", "target": "div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary", "reason": "No page script touches this button; the only IntersectionObserver on it is the kit's system.js action bar, which watches it as a twin of the bar's own 'See the stock' and hides the bar when it scrolls in. The button is fully visible at rest."}
+]

@@ -1,0 +1,156 @@
+{
+ "start": "2026-11-27T14:49:58.792Z",
+ "round": 2,
+ "idle": 0,
+ "errors": 0,
+ "status": "pass",
+ "history": [
+  {
+   "at": "2026-11-27T15:06:10.220Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 3,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-27T15:07:55.532Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 2,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-27T15:08:10.199Z",
+   "mode": "manual",
+   "status": "pass",
+   "fails": 0,
+   "round": 2,
+   "reused": true,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "dir": "/home/user/livecontainer-/hh-outlet/storefront",
+  "kind": "place",
+  "start": "2026-11-27T14:49:58.792Z",
+  "by": "start.mjs",
+  "url": null,
+  "category": "liquidation store: pallet finds",
+  "primary": "See the stock"
+ },
+ "manual": true,
+ "roundKey": "79bf1bec0c34e91d:0f8ec526",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "79bf1bec0c34e91d",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "scroll-reveal",
+    "where": "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\"",
+    "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "scroll-reveal"
+    ],
+    "wheres": [
+     "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\""
+    ]
+   },
+   {
+    "check": "contrast",
+    "where": "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\"",
+    "msg": "body text over a effect reads at 2.7:1 at its worst tenth (needs 4.5:1)",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"see the stock\"",
+    "msg": "\"see the stock\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "assumed",
+    "where": "div#visit > div.visit__cols > div.visit__col.stack-4:nth-of-type(1) > dl.hours \"Tue to Fri 10:00 to 18:00 Sat 10:00 to 1\"",
+    "msg": "1 fact marked as assumed, for the report: \"Tue to Fri 10:00 to 18:00 Sat 10:00 to 16:00 Sun and Mon Clo\"",
+    "fix": "list each assumed fact in the report for the client to confirm, or take it from the brief",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 70,
+   "layout": 3
+  }
+ },
+ "open": [],
+ "waived": [
+  {
+   "check": "scroll-reveal",
+   "where": "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\"",
+   "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
+   "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "scroll-reveal"
+   ],
+   "wheres": [
+    "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\""
+   ],
+   "reason": "No page script touches this button; the only IntersectionObserver on it is the kit's system.js action bar, which watches it as a twin of the bar's own 'See the stock' and hides the bar when it scrolls in. The button is fully visible at rest."
+  },
+  {
+   "check": "contrast",
+   "where": "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\"",
+   "msg": "body text over a effect reads at 2.7:1 at its worst tenth (needs 4.5:1)",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\""
+   ],
+   "reason": "Measured while the row passes under the kit's required phone action bar (nav.actionbar, fixed at the foot); the crop shows the bar's own button over the row. Uncovered, the link is #1c6234 on #f8f8f8 at 6.95:1."
+  }
+ ],
+ "warnCount": 2,
+ "at": "2026-11-27T15:08:10.200Z"
+}

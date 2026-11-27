@@ -1,0 +1,79 @@
+consistency  /home/user/livecontainer-/hh-outlet/storefront/index.html
+--quick: not checked: scroll-linked (stepping), scroll-reveal (the reveal walk; IntersectionObserver reveals are read), hover-spill, hidden-visual, loop-pause, forms, reduced-motion, the dead-IntersectionObserver walk (hidden content is read with scripts off and under reduced motion), hover-move. Still told: IntersectionObserver reveals (scroll-reveal), held sections (pinned) and CSS scroll timelines (scroll-linked); faults inside held or [data-big-scene] sections are WARNs
+
+1440x900  5 screens  0 FAIL  2 WARN
+  WARN action-repeat   header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary  "see the stock"
+       "see the stock" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it  [1440-02-action-repeat.jpg]
+       fix: show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once
+  WARN assumed         div#visit > div.visit__cols > div.visit__col.stack-4:nth-of-type(1) > dl.hours  "Tue to Fri 10:00 to 18:00 Sat 10:00 to 1"
+       1 fact marked as assumed, for the report: "Tue to Fri 10:00 to 18:00 Sat 10:00 to 16:00 Sun and Mon Clo"  [1440-01-assumed.jpg]
+       fix: list each assumed fact in the report for the client to confirm, or take it from the brief
+
+820x1180  5 screens  0 FAIL  1 WARN
+  WARN orphan          div.visit__cols > div.visit__col.stack-4:nth-of-type(1) > dl.hours > dd:nth-of-type(1)  "10:00 to 18:00"
+       its last line holds only "18:00" (and 1 more like it: "10:00 to 16:00")  [820-01-orphan.jpg]
+       fix: rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word
+
+768x1024  5 screens  0 FAIL  1 WARN
+  WARN orphan          div.visit__cols > div.visit__col.stack-4:nth-of-type(1) > dl.hours > dd:nth-of-type(1)  "10:00 to 18:00"
+       its last line holds only "18:00" (and 1 more like it: "10:00 to 16:00")  [768-01-orphan.jpg]
+       fix: rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word
+
+390x844  7 screens  0 FAIL  0 WARN
+
+first screen at 1280, 1152, 1024, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  0 FAIL
+
+checks
+  PASS assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           PASS hero-fill              PASS flush                  
+  PASS placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  PASS off-viewport           PASS fold-card              
+  SKIP hover-spill            PASS overlap-text           PASS collide                
+  PASS tap-size               PASS row-gap                PASS cut-text               
+  PASS fold-cut               PASS marquee                SKIP scroll-linked          
+  SKIP scroll-reveal          PASS pinned                 SKIP loop-pause             
+  SKIP reduced-motion         PASS hidden-content         PASS webgl                  
+  PASS no-visual              PASS text-only              PASS card-visual            
+  SKIP hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  PASS cta                    PASS pricing-tiers          PASS copy-headline          
+  PASS copy-fact              PASS copy-headings          PASS copy-buttons           
+  PASS copy-actions           PASS heading-scale          PASS stagger                
+  PASS top-stagger            PASS off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            PASS section-gaps           PASS proximity              
+  PASS hole                   PASS links                  SKIP forms                  
+  PASS photo-upscale          PASS photo-set              PASS photo-credit           
+  PASS nav-family             PASS nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        WARN orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           PASS copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  PASS one-screen             SKIP hover                  SKIP hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         PASS visual-empty           PASS effect-kind            
+  PASS hero-enter             PASS moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           PASS hero-screen            PASS section-height         
+  PASS section-air            PASS one-section            PASS one-heading            
+  PASS container-edges        PASS row-lines              PASS split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           PASS empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           PASS skip-link              PASS menu-toggle            
+  PASS lang                   PASS page-meta              PASS share-meta             
+  WARN action-repeat          PASS map-link               PASS open-now               
+  WARN assumed                PASS run-on                 PASS form-fields            
+  PASS form-send              
+
+total  0 FAIL  4 WARN  (crops and report.json in /home/user/livecontainer-/hh-outlet/storefront/.taste-skill/consistency)

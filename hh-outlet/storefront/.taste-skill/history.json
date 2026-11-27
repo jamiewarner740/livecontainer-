@@ -1,0 +1,40 @@
+{
+ "palettes": [
+  "mint-pink-accounts"
+ ],
+ "types": [
+  "figtree"
+ ],
+ "dealt": [
+  "figtree",
+  "literata",
+  "bricolage"
+ ],
+ "photos": [
+  {
+   "trade": "shop",
+   "draft": true,
+   "lead": null,
+   "ids": [],
+   "sections": [
+    "hero",
+    "goods",
+    "goods",
+    "goods",
+    "goods",
+    "place",
+    "place",
+    "place"
+   ],
+   "seed": "5i1wo6",
+   "at": "2026-11-27T14:50:08.989Z"
+  }
+ ],
+ "moments": [
+  {
+   "id": "word-highlight",
+   "at": "2026-11-27T14:50:59.089Z",
+   "seed": "946da352"
+  }
+ ]
+}
