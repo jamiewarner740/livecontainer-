@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 import { readCart, writeCart } from '@/lib/cart';
-import { getProductsByIds } from '@/lib/products';
+import { getProductsByIds, recordEvent } from '@/lib/products';
 import { CheckoutError, createOrder, payOrder } from '@/lib/checkout';
 
 const int = (v: FormDataEntryValue | null) => Number.parseInt(String(v ?? ''), 10);
@@ -18,6 +18,7 @@ export async function addToBag(form: FormData) {
   const line = lines.find((l) => l.productId === productId);
   const want = Math.min((line?.qty ?? 0) + qty, p.available);
   await writeCart(line ? lines.map((l) => (l.productId === productId ? { ...l, qty: want } : l)) : [...lines, { productId, qty: want }]);
+  await recordEvent([productId], 'add_to_bag', null);
   redirect('/cart?added=' + productId);
 }
 

@@ -3,6 +3,7 @@ import { sql } from './db';
 import { store } from './store';
 import { getPaymentProvider } from './payments';
 import { quoteShipping, type Fulfillment } from './shipping';
+import { enqueueEbayQuantity } from './admin/catalog';
 
 export type Line = { productId: number; qty: number };
 export type Customer = { name: string; email: string; phone?: string };
@@ -28,7 +29,7 @@ export async function createOrder(input: { lines: Line[]; customer: Customer; fu
   return sql.begin(async (tx) => {
     const ids = lines.map((l) => l.productId).sort((a, b) => a - b);
     const rows = await tx<{ id: number; name: string; price_cents: number; stock: number; active: boolean }[]>`
-      select id, name, price_cents, stock, active from products where id = any(${ids}) order by id for update`;
+      select id, name, price_cents, stock, (active and status = 'active' and sell_on_web) as active from products where id = any(${ids}) order by id for update`;
     const held = await tx<{ product_id: number; qty: number }[]>`
       select product_id, sum(qty)::int as qty from reservations
       where product_id = any(${ids}) and status = 'active' and expires_at > now() group by product_id`;
@@ -127,6 +128,7 @@ export async function payOrder(id: string, token: string, sourceId: string) {
     for (const h of holds.sort((a, b) => a.product_id - b.product_id)) {
       await tx`update products set stock = stock - ${h.qty} where id = ${h.product_id}`;
       await tx`insert into inventory_events (product_id, delta, reason, order_id) values (${h.product_id}, ${-h.qty}, 'sale_web', ${id})`;
+      await enqueueEbayQuantity(tx, h.product_id);
     }
     await tx`update orders set status = 'paid', paid_at = now(), payment_provider = ${provider.name}, payment_id = ${result.paymentId} where id = ${id}`;
   });

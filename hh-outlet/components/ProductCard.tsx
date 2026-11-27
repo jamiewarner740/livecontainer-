@@ -8,7 +8,7 @@ export function ProductCard({ p, priority = false }: { p: Product; priority?: bo
   return (
     <Link href={`/products/${p.slug}`} className="group flex w-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-gold/70">
       <div className="relative aspect-square overflow-hidden bg-raised">
-        <Image src={p.image} alt={p.alt} fill priority={priority} sizes="(min-width: 1280px) 240px, (min-width: 1024px) 22vw, (min-width: 640px) 30vw, 48vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+        <Image src={p.thumb} alt={p.alt} fill priority={priority} sizes="(min-width: 1280px) 240px, (min-width: 1024px) 22vw, (min-width: 640px) 30vw, 48vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
         {s && <span className="absolute left-2 top-2 rounded-md bg-gold px-1.5 py-0.5 text-xs font-bold text-ground">−{s.percent}%</span>}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3">

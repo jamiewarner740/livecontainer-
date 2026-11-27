@@ -11,9 +11,11 @@
     "test": "vitest run",
     "db:seed": "tsx --env-file=.env.local scripts/seed.ts",
     "db:setup": "npm run db:migrate && npm run db:seed",
-    "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts"
+    "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts",
+    "staff:create": "tsx --env-file=.env.local scripts/create-staff.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
     "drizzle-orm": "^0.45.4",
     "next": "15.5",
     "postgres": "^4.1.1",

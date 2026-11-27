@@ -10,3 +10,6 @@ function connect() {
 
 // One pool per process (Next.js dev reloads modules, so keep it on globalThis).
 export const sql = globalThis.__hhSql ?? (globalThis.__hhSql = connect());
+
+/** Either the pool or an open transaction; helpers that take one can run inside the caller's transaction. */
+export type Db = postgres.Sql | postgres.TransactionSql;

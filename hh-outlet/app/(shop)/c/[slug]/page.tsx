@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ProductGrid } from '@/components/ProductCard';
-import { listProducts } from '@/lib/products';
+import { recordEvent, listProducts } from '@/lib/products';
 import { getCategory } from '@/lib/store';
 
 async function resolve(slug: string) {
@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const r = await resolve((await params).slug);
   if (!r) notFound();
+  await recordEvent(r.items.slice(0, 40).map((p) => p.id), 'impression', null);
   return (
     <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6">
       <div className="mb-3 flex items-baseline justify-between gap-4">

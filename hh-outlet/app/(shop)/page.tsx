@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ProductGrid } from '@/components/ProductCard';
-import { listProducts, savings } from '@/lib/products';
+import { recordEvent, listProducts, savings } from '@/lib/products';
 import { categories, money, store } from '@/lib/store';
 
 export default async function Home() {
-  const items = await listProducts();
+  const items = await listProducts({ limit: 200 });
+  await recordEvent(items.slice(0, 40).map((p) => p.id), 'impression', null);
   const best = Math.max(0, ...items.map((p) => savings(p)?.percent ?? 0));
   const cats = categories.map((c) => ({ ...c, items: items.filter((p) => p.category === c.slug) })).filter((c) => c.items.length > 0);
   return (

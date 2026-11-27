@@ -9,8 +9,8 @@ const sql = postgres(url, { onnotice: () => {} });
 let added = 0;
 for (const p of seedProducts) {
   const r = await sql`
-    insert into products (id, slug, name, price_cents, retail_cents, stock, category, image, alt, condition, added_at)
-    values (${p.id}, ${p.slug}, ${p.name}, ${p.priceCents}, ${p.retailCents ?? null}, ${p.stock}, ${p.category}, ${p.image}, ${p.alt}, ${p.condition ?? null}, ${p.addedAt})
+    insert into products (id, slug, sku, name, price_cents, retail_cents, stock, category, image, alt, condition, added_at)
+    values (${p.id}, ${p.slug}, ${'HH-' + p.id}, ${p.name}, ${p.priceCents}, ${p.retailCents ?? null}, ${p.stock}, ${p.category}, ${p.image}, ${p.alt}, ${p.condition ?? null}, ${p.addedAt})
     on conflict (id) do nothing returning id`;
   if (r.length) {
     added++;

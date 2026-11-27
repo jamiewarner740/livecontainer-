@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ProductGrid } from '@/components/ProductCard';
-import { getProduct, relatedProducts, savings } from '@/lib/products';
+import { getProduct, recordEvent, relatedProducts, savings } from '@/lib/products';
+import { packagingLabels, testedLabels } from '@/lib/conditions';
 import { getCategory, money, store } from '@/lib/store';
 import { addToBag } from '@/app/actions';
 
@@ -21,6 +22,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const s = savings(p);
   const cat = getCategory(p.category);
   const more = await relatedProducts(p);
+  await recordEvent([p.id], 'view', null);
   const maxQty = Math.min(p.available, 10);
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'Product', name: p.name, image: p.image, sku: String(p.id),
@@ -33,8 +35,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <Link href="/" className="hover:text-gold-soft">Home</Link>{cat && <> <span aria-hidden="true">/</span> <Link href={`/c/${cat.slug}`} className="hover:text-gold-soft">{cat.name}</Link></>}
       </nav>
       <div className="grid gap-6 md:grid-cols-2 md:gap-10">
-        <div className="relative aspect-square overflow-hidden rounded-xl border border-line bg-raised">
-          <Image src={p.image} alt={p.alt} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+        <div>
+          <ul aria-label="Photos" className="scrollbar-none flex snap-x snap-mandatory overflow-x-auto rounded-xl border border-line bg-raised">
+            {p.images.map((img, i) => (
+              <li key={img.path} className="relative aspect-square w-full shrink-0 snap-center">
+                <Image src={img.path} alt={i === 0 ? p.alt : `${p.alt}, photo ${i + 1}`} fill priority={i === 0} sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+              </li>
+            ))}
+          </ul>
+          {p.images.length > 1 && <p className="mt-2 text-center text-xs text-muted">{p.images.length} photos, swipe to see them all</p>}
         </div>
         <div>
           <h1 className="font-display text-2xl font-semibold leading-tight sm:text-3xl">{p.name}</h1>
@@ -64,12 +73,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <dl className="mt-6 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 border-y border-line py-4 text-sm">
             <dt className="text-muted">Available</dt><dd>{p.available > 0 ? (p.available <= 5 ? `Only ${p.available} left` : `${p.available} in stock`) : 'Sold out'}</dd>
             {p.condition && <><dt className="text-muted">Condition</dt><dd>{p.condition}</dd></>}
+            {p.tested && <><dt className="text-muted">Testing</dt><dd>{testedLabels[p.tested]}</dd></>}
+            {p.packaging && <><dt className="text-muted">Packaging</dt><dd>{packagingLabels[p.packaging]}</dd></>}
+            {p.included && <><dt className="text-muted">Included</dt><dd>{p.included}</dd></>}
+            {p.missing && <><dt className="text-muted">Missing</dt><dd>{p.missing}</dd></>}
+            {p.defects && <><dt className="text-muted">Known issues</dt><dd>{p.defects}</dd></>}
+            {p.brand && <><dt className="text-muted">Brand</dt><dd>{p.brand}{p.model ? `, model ${p.model}` : ''}</dd></>}
             <dt className="text-muted">Pickup</dt><dd>Free at the store</dd>
-            <dt className="text-muted">Shipping</dt><dd>USPS, UPS or FedEx, free over {money(store.freeShippingOverCents)}</dd>
+            <dt className="text-muted">Shipping</dt><dd>{p.pickupOnly ? 'Pickup only: too large to ship' : <>USPS, UPS or FedEx, free over {money(store.freeShippingOverCents)}</>}</dd>
             <dt className="text-muted">Returns</dt><dd>Within {store.returnDays} days of delivery, unused, in the original packaging</dd>
           </dl>
         </div>
       </div>
+      {p.description && (
+        <section aria-labelledby="about" className="max-w-2xl pt-8">
+          <h2 id="about" className="mb-2 font-display text-xl font-semibold">About this item</h2>
+          <p className="whitespace-pre-line text-ink/90">{p.description}</p>
+        </section>
+      )}
       {more.length > 0 && (
         <section aria-labelledby="more" className="pt-12">
           <h2 id="more" className="mb-3 font-display text-2xl font-semibold">More finds like this</h2>
