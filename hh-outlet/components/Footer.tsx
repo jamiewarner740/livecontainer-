@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { categories, store } from '@/lib/catalog';
+import { categories, money, store } from '@/lib/store';
 
 export function Footer() {
   return (
@@ -21,7 +21,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm text-muted">
             <li>Free pickup at the store</li>
             <li>Shipping by USPS, UPS or FedEx</li>
-            <li>Free shipping over ${store.freeShippingOver}</li>
+            <li>Free shipping over {money(store.freeShippingOverCents).replace('.00', '')}</li>
             <li>Returns within {store.returnDays} days of delivery</li>
           </ul>
         </div>

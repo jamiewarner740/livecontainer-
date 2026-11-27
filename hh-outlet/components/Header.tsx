@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { categories } from '@/lib/catalog';
+import { categories } from '@/lib/store';
+import { cartCount, readCart } from '@/lib/cart';
 
-export function Header() {
+export async function Header() {
+  const count = cartCount(await readCart());
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-ground/95 backdrop-blur supports-[backdrop-filter]:bg-ground/85">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-30 focus:bg-gold focus:px-3 focus:py-2 focus:text-ground">Skip to products</a>
@@ -10,6 +12,10 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2.5" aria-label="H&H Outlet home">
           <Image src="/brand/logo-64.png" alt="" width={36} height={36} priority className="rounded-md" />
           <span className="font-display text-xl font-semibold tracking-tight">H&amp;H <span className="text-gold">Outlet</span></span>
+        </Link>
+        <Link href="/cart" className="relative ml-auto flex size-11 items-center justify-center rounded-full border border-line hover:border-gold sm:order-last sm:ml-0" aria-label={count ? `Your bag, ${count} ${count === 1 ? 'item' : 'items'}` : 'Your bag, empty'}>
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5"><path fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" d="M5 8h14l-1 12H6L5 8Zm4 0V6a3 3 0 0 1 6 0v2"/></svg>
+          {count > 0 && <span className="absolute -right-1 -top-1 flex min-w-5 items-center justify-center rounded-full bg-gold px-1 text-xs font-bold text-ground tabular-nums">{count}</span>}
         </Link>
         <form action="/search" role="search" className="order-last w-full sm:order-none sm:ml-auto sm:w-auto sm:min-w-80">
           <label htmlFor="q" className="sr-only">Search the store</label>

@@ -9,9 +9,9 @@
     "start": "next start -p 3000",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "db:push": "drizzle-kit push",
-    "db:seed": "tsx scripts/seed.ts",
-    "db:setup": "tsx scripts/setup-db.ts"
+    "db:seed": "tsx --env-file=.env.local scripts/seed.ts",
+    "db:setup": "npm run db:migrate && npm run db:seed",
+    "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.4",

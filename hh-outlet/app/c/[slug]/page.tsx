@@ -1,27 +1,23 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ProductGrid } from '@/components/ProductCard';
-import { categories, getCategory, inCategory, under } from '@/lib/catalog';
+import { listProducts } from '@/lib/products';
+import { getCategory } from '@/lib/store';
 
-const special: Record<string, { name: string; items: () => ReturnType<typeof under> }> = {
-  'under-10': { name: 'Under $10', items: () => under(10) },
-};
-
-function resolve(slug: string) {
-  if (special[slug]) return { name: special[slug].name, items: special[slug].items() };
+async function resolve(slug: string) {
+  if (slug === 'under-10') return { name: 'Under $10', items: await listProducts({ maxPriceCents: 1000 }) };
   const c = getCategory(slug);
-  return c ? { name: c.name, items: inCategory(slug) } : null;
+  return c ? { name: c.name, items: await listProducts({ category: slug }) } : null;
 }
 
-export function generateStaticParams() { return [...Object.keys(special), ...categories.map((c) => c.slug)].map((slug) => ({ slug })); }
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const r = resolve((await params).slug);
-  return r ? { title: r.name, description: `${r.name} at H&H Outlet: returned and overstock finds well under retail.` } : {};
+  const slug = (await params).slug;
+  const name = slug === 'under-10' ? 'Under $10' : getCategory(slug)?.name;
+  return name ? { title: name, description: `${name} at H&H Outlet: returned and overstock finds well under retail.` } : {};
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
-  const r = resolve((await params).slug);
+  const r = await resolve((await params).slug);
   if (!r) notFound();
   return (
     <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6">

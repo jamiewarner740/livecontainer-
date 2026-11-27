@@ -1,18 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ProductGrid } from '@/components/ProductCard';
-import { bySavings, categories, inCategory, newest, store } from '@/lib/catalog';
+import { listProducts, savings } from '@/lib/products';
+import { categories, money, store } from '@/lib/store';
 
-export default function Home() {
-  const items = newest();
-  const best = bySavings()[0];
-  const cats = categories.map((c) => ({ ...c, items: inCategory(c.slug) })).filter((c) => c.items.length > 0);
+export default async function Home() {
+  const items = await listProducts();
+  const best = Math.max(0, ...items.map((p) => savings(p)?.percent ?? 0));
+  const cats = categories.map((c) => ({ ...c, items: items.filter((p) => p.category === c.slug) })).filter((c) => c.items.length > 0);
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <ul className="scrollbar-none -mx-4 flex gap-5 overflow-x-auto px-4 py-3 text-xs text-muted sm:mx-0 sm:px-0">
         <li className="whitespace-nowrap"><span className="text-gold">●</span> Free pickup in store</li>
-        <li className="whitespace-nowrap"><span className="text-gold">●</span> Free shipping over ${store.freeShippingOver}</li>
-        {best && <li className="whitespace-nowrap"><span className="text-gold">●</span> Up to {Math.round(((best.retail! - best.price) / best.retail!) * 100)}% off retail</li>}
+        <li className="whitespace-nowrap"><span className="text-gold">●</span> Free shipping over {money(store.freeShippingOverCents).replace('.00', '')}</li>
+        {best > 0 && <li className="whitespace-nowrap"><span className="text-gold">●</span> Up to {best}% off retail</li>}
       </ul>
 
       <section aria-labelledby="just-in" className="pt-1">
@@ -20,7 +21,7 @@ export default function Home() {
           <h1 id="just-in" className="font-display text-2xl font-semibold sm:text-3xl">Just in</h1>
           <span className="text-sm text-muted">{items.length} items</span>
         </div>
-        <ProductGrid items={items} eager={4} />
+        {items.length ? <ProductGrid items={items} eager={4} /> : <p className="text-muted">Everything sold. New items go out as soon as they are checked.</p>}
       </section>
 
       {cats.length > 1 && (
