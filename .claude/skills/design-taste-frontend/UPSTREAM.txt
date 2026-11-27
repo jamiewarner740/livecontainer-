@@ -1,0 +1,2 @@
+Source: https://github.com/Leonxlnx/taste-skill (commit 952435f, skills/taste-skill)
+Version: tasteskill 2.5.1, MIT licence (see LICENSE)
