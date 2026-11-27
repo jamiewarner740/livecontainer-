@@ -1,108 +1,134 @@
 {
- "start": "2026-11-27T14:49:58.792Z",
+ "start": "2026-11-27T16:01:20.887Z",
  "round": 2,
  "idle": 0,
  "errors": 0,
  "status": "pass",
  "history": [
   {
-   "at": "2026-11-27T15:06:10.220Z",
+   "at": "2026-11-27T16:02:42.193Z",
    "mode": "manual",
    "status": "fail",
-   "fails": 3,
+   "fails": 1,
    "round": 1,
    "reused": false,
    "stopHookActive": false
   },
   {
-   "at": "2026-11-27T15:07:55.532Z",
+   "at": "2026-11-27T16:04:12.774Z",
    "mode": "manual",
    "status": "fail",
-   "fails": 2,
+   "fails": 1,
    "round": 2,
    "reused": false,
    "stopHookActive": false
   },
   {
-   "at": "2026-11-27T15:08:10.199Z",
+   "at": "2026-11-27T16:05:59.934Z",
    "mode": "manual",
    "status": "pass",
    "fails": 0,
    "round": 2,
-   "reused": true,
+   "reused": false,
    "stopHookActive": false
-  },
-  {
-   "at": "2026-11-27T15:09:38.924Z",
-   "mode": "hook",
-   "host": "claude",
-   "decision": "allow",
-   "reason": "no build is active here",
-   "stopHookActive": false
-  },
-  {
-   "at": "2026-11-27T15:09:54.555Z",
-   "mode": "hook",
-   "host": "claude",
-   "decision": "allow",
-   "reason": "no build is active here",
-   "stopHookActive": true
   }
  ],
  "max": 3,
  "marker": {
   "page": "index.html",
-  "dir": "/home/user/livecontainer-/hh-outlet/storefront",
-  "kind": "place",
-  "start": "2026-11-27T14:49:58.792Z",
-  "by": "start.mjs",
   "url": null,
-  "category": "liquidation store: pallet finds",
-  "primary": "See the stock"
+  "root": null,
+  "kind": "place",
+  "category": "liquidation store",
+  "primary": "See the stock",
+  "rounds": 3,
+  "start": "2026-11-27T16:01:20.887Z",
+  "by": "gate.mjs --start"
  },
  "manual": true,
- "roundKey": "79bf1bec0c34e91d:0f8ec526",
+ "roundKey": "862d47cbabbf363d:2e4aa5ad",
  "roundFree": false,
  "idleFree": false,
  "blockKey": null,
- "fp": "79bf1bec0c34e91d",
+ "fp": "da7ff93dd14cd1db",
  "page": "index.html",
  "found": {
   "fails": [
    {
-    "check": "scroll-reveal",
-    "where": "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\"",
-    "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
-    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "check": "card-layout",
+    "where": "section#shop > div.wrap > div.grid.grid--top \"Fall wreath, 20 inch $10.00 Retail $25.0\"",
+    "msg": "9 of 9 cards drawn one way (one panel, ground, placement and fragment): copies of one card",
+    "fix": "a card layout at most twice on a page: build the other sections another way",
     "widths": [
+     1440,
      390
     ],
     "from": "consistency",
     "ids": [
-     "scroll-reveal"
+     "card-layout"
     ],
     "wheres": [
-     "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\""
+     "section#shop > div.wrap > div.grid.grid--top \"Fall wreath, 20 inch $10.00 Retail $25.0\""
     ]
    },
    {
-    "check": "contrast",
-    "where": "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\"",
-    "msg": "body text over a effect reads at 2.7:1 at its worst tenth (needs 4.5:1)",
-    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "check": "copy-headings",
+    "where": "div.grid.grid--top > a.tile.span-4:nth-of-type(2) > div.tile__head > h3 \"Wine chiller bucket\"",
+    "msg": "\"Wine chiller bucket\" names no product, part, place or section (7 headings like it; at most one brand line per page) (and 6 more like it: \"Recipe binder\", \"Portable car heater\", \"Mini karaoke machine\", \"Bonnyco light box\", ...)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
     "widths": [
-     390
+     1440
     ],
     "from": "consistency",
     "ids": [
-     "contrast"
+     "copy-headings"
     ],
     "wheres": [
-     "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\""
+     "div.grid.grid--top > a.tile.span-4:nth-of-type(2) > div.tile__head > h3 \"Wine chiller bucket\""
     ]
    }
   ],
   "warns": [
+   {
+    "check": "links",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(4) > a.nav__link \"Hours\"",
+    "msg": "\"Hours\" goes to #visit, in the footer",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(1) > a.nav__link \"Home\"",
+    "msg": "\"Home\" opens a section headed \"Fall wreath, 20 inch\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(2) > a.nav__link \"Gadgets\"",
+    "msg": "\"Gadgets\" opens a section headed \"Portable car heater\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(3) > a.nav__link \"Clothing\"",
+    "msg": "\"Clothing\" opens a section headed \"Faux leather leggings, L\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
    {
     "check": "action-repeat",
     "where": "header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"see the stock\"",
@@ -115,58 +141,79 @@
    },
    {
     "check": "assumed",
-    "where": "div#visit > div.visit__cols > div.visit__col.stack-4:nth-of-type(1) > dl.hours \"Tue to Fri 10:00 to 18:00 Sat 10:00 to 1\"",
+    "where": "div#visit > dl.hours \"Tue to Fri 10:00 to 18:00 Sat 10:00 to 1\"",
     "msg": "1 fact marked as assumed, for the report: \"Tue to Fri 10:00 to 18:00 Sat 10:00 to 16:00 Sun and Mon Clo\"",
     "fix": "list each assumed fact in the report for the client to confirm, or take it from the brief",
     "widths": [
      1440
     ],
     "from": "consistency"
+   },
+   {
+    "check": "proximity",
+    "where": "section#shop > div.wrap > div.grid.grid--top \"Fall wreath, 20 inch $10.00 Retail $25.0\"",
+    "msg": "the rows sit 12px apart, about as close as a picture to its own caption (16px): a caption reads with the row below",
+    "fix": "set the gap between rows at twice the gap between a picture and its caption or more",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.grid.grid--top > a.tile.span-4:nth-of-type(3) > div.tile__media > img \"recipe-binder.jpg\"",
+    "msg": "9 photographs in more than one look: lightness from 0.39 to 0.76; saturation from 0.03 to 0.34; the odd one out is recipe-binder.jpg",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
    }
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 70,
+   "consistency": 78,
    "layout": 3
   }
  },
  "open": [],
  "waived": [
   {
-   "check": "scroll-reveal",
-   "where": "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\"",
-   "msg": "starts \"color\" (0.1 s) the moment it is scrolled into view (an IntersectionObserver)",
-   "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+   "check": "card-layout",
+   "where": "section#shop > div.wrap > div.grid.grid--top \"Fall wreath, 20 inch $10.00 Retail $25.0\"",
+   "msg": "9 of 9 cards drawn one way (one panel, ground, placement and fragment): copies of one card",
+   "fix": "a card layout at most twice on a page: build the other sections another way",
    "widths": [
+    1440,
     390
    ],
    "from": "consistency",
    "ids": [
-    "scroll-reveal"
+    "card-layout"
    ],
    "wheres": [
-    "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"See the stock\""
+    "section#shop > div.wrap > div.grid.grid--top \"Fall wreath, 20 inch $10.00 Retail $25.0\""
    ],
-   "reason": "No page script touches this button; the only IntersectionObserver on it is the kit's system.js action bar, which watches it as a twin of the bar's own 'See the stock' and hides the bar when it scrolls in. The button is fully visible at rest."
+   "reason": "This is the store's product grid: every listing must be the same card (photo, name, price, retail) so shoppers can scan and compare; the owner's brief asks for a dense, uniform product grid. It is the page's only card group."
   },
   {
-   "check": "contrast",
-   "where": "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\"",
-   "msg": "body text over a effect reads at 2.7:1 at its worst tenth (needs 4.5:1)",
-   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "check": "copy-headings",
+   "where": "div.grid.grid--top > a.tile.span-4:nth-of-type(2) > div.tile__head > h3 \"Wine chiller bucket\"",
+   "msg": "\"Wine chiller bucket\" names no product, part, place or section (7 headings like it; at most one brand line per page) (and 6 more like it: \"Recipe binder\", \"Portable car heater\", \"Mini karaoke machine\", \"Bonnyco light box\", ...)",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
    "widths": [
-    390
+    1440
    ],
    "from": "consistency",
    "ids": [
-    "contrast"
+    "copy-headings"
    ],
    "wheres": [
-    "ul.rows > li:nth-of-type(1) > span.rows__name > a.link \"Portable car heater\""
+    "div.grid.grid--top > a.tile.span-4:nth-of-type(2) > div.tile__head > h3 \"Wine chiller bucket\""
    ],
-   "reason": "Measured while the row passes under the kit's required phone action bar (nav.actionbar, fixed at the foot); the crop shows the bar's own button over the row. Uncovered, the link is #1c6234 on #f8f8f8 at 6.95:1."
+   "reason": "Each card heading is the name of a product for sale (Wine chiller bucket, Recipe binder, Portable car heater); the checker does not recognise item names in a shop listing as products."
   }
  ],
- "warnCount": 2,
- "at": "2026-11-27T15:08:10.200Z"
+ "warnCount": 8,
+ "at": "2026-11-27T16:05:59.934Z"
 }

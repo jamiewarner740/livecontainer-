@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>H&amp;H Outlet: liquidation store, in store and online</title>
-<meta name="description" content="H&amp;H Outlet buys pallets of returned and overstock goods and sells each item at a fraction of retail, from $5, in store and online.">
+<meta name="description" content="H&amp;H Outlet sells returned and overstock goods at a fraction of retail, from $5, in store and online.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="H&amp;H Outlet: liquidation store, in store and online">
-<meta property="og:description" content="Pallet finds from $5, sold in store and online with local pickup or shipping.">
+<meta property="og:description" content="Finds from $5, sold in store and online with local pickup or shipping.">
 <meta property="og:image" content="share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -46,13 +46,14 @@
 <style>
   /* a row's description under its name, muted at the body size (sections.md section 4: list text 16px) */
   .rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-body); }
-  @media (min-width: 640px) and (max-width: 1023px) {
-    #shop .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    #shop .grid > .span-4 { grid-column: auto; }
-    #shop .visit__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  }
+  /* the nine listings stay three across on a tablet, so the grid keeps its two screens */
+  @media (min-width: 640px) and (max-width: 1023px) { #shop .grid > .tile.span-4 { grid-column: auto / span 4; } }
   /* the name set wide fits the phone's column (the kit's 19vw runs "H&H Outlet" past it) */
   @media (max-width: 639px) { #contact .close__word { font-size: 15vw; line-height: 1.05; } }
+  /* the hours need the phone's full column: two-up at 320 their times run into the day names */
+  @media (max-width: 639px) { #contact .footer__col#visit { grid-column: 1 / -1; } }
+  /* nine listings two-up on a phone: the ninth runs the full row, so it takes a wide crop and the row height stays */
+  @media (max-width: 639px) { #shop .tile:last-child .tile__media { --tile-ratio: 16 / 9 !important; } }
 </style>
 </head>
 <body>
@@ -89,8 +90,8 @@
   <section class="hero hero--statement ground-brand" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text hero__in">
       <div>
-        <h1 id="hero-h">Liquidation outlet for pallet finds, from $5</h1>
-        <p class="hero__lead">Home goods, gadgets and clothing from returned and overstock pallets, each priced well under retail. Buy at the store or online.</p>
+        <h1 id="hero-h">Liquidation outlet with finds from $5</h1>
+        <p class="hero__lead">Returned and overstock home goods, gadgets and clothing, each priced well under retail. Buy at the store or online.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#shop">See the stock<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
       </div>
       <dl class="hero__facts">
@@ -105,57 +106,62 @@
   <section class="section statement" id="how" data-moment="word-highlight" aria-label="How the store works">
     <div class="wrap">
       <p class="t-label">How the store works</p>
-      <p class="mo-wh__text">We buy pallets of returned and overstock goods, open every box, check what is inside and price each piece well under retail. Most items are one of a kind, so when one sells it is <strong>gone</strong>.</p>
+      <p class="mo-wh__text">We open every box of returned and overstock goods, check what is inside and price each piece well under retail. Most items are one of a kind, so when one sells it is <strong>gone</strong>.</p>
     </div>
   </section>
 
-  <section class="section" id="shop" aria-labelledby="shop-h" style="--h: 1; --hm: 2">
+  <section class="section" id="shop" aria-labelledby="shop-h" style="--h: 2">
     <div class="wrap">
       <div class="section-head">
         <h2 id="shop-h">Recent finds and prices</h2>
         <p>Each item shows what it sold for new.</p>
       </div>
       <div class="grid grid--top">
-        <div class="span-4" id="home-goods">
-          <p class="t-label">Home</p>
-          <ul class="rows">
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/9">Fall wreath, 20 inch</a><small>Retail $25.00</small></span><span class="rows__value">$10.00</span></li>
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/8">Wine chiller bucket</a><small>Retail $25.00</small></span><span class="rows__value">$10.00</span></li>
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/7">Recipe binder</a><small>Retail $30.00</small></span><span class="rows__value">$5.00</span></li>
-          </ul>
-        </div>
-        <div class="span-4" id="gadgets">
-          <p class="t-label">Gadgets</p>
-          <ul class="rows">
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/12">Portable car heater</a><small>Retail $18.00</small></span><span class="rows__value">$5.00</span></li>
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/6">Mini karaoke machine</a><small>Retail $30.00</small></span><span class="rows__value">$5.00</span></li>
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/10">Bonnyco light box</a><small>Retail $17.99</small></span><span class="rows__value">$8.00</span></li>
-          </ul>
-        </div>
-        <div class="span-4" id="clothing">
-          <p class="t-label">Clothing and pets</p>
-          <ul class="rows">
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/13">Faux leather leggings, L</a><small>Retail $34.99</small></span><span class="rows__value">$5.00</span></li>
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/5">Kids gloves, age 8 to 10</a><small>Retail $17.99</small></span><span class="rows__value">$5.00</span></li>
-            <li><span class="rows__name"><a class="link" href="https://www.hisnhersllc.com/products/11">Attachable cat bed</a><small>Retail $44.00</small></span><span class="rows__value">$20.00</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="visit visit--cols" id="visit" data-place="visit" style="margin-top: var(--s-7)">
-        <div class="visit__cols">
-          <div class="visit__col stack-4">
-            <h3 class="t-label">Opening hours</h3>
-            <dl class="hours" data-tz="America/New_York" data-assumed><dt data-days="tue-fri">Tue to Fri</dt><dd>10:00&nbsp;to&nbsp;18:00</dd><dt data-days="sat">Sat</dt><dd>10:00&nbsp;to&nbsp;16:00</dd><dt data-days="sun,mon">Sun and Mon</dt><dd>Closed</dd></dl>
-          </div>
-          <div class="visit__col stack-4">
-            <h3 class="t-label">Pickup and shipping</h3>
-            <p>Free pickup at the store, or shipping by USPS, UPS or FedEx. Free shipping over $150.</p>
-          </div>
-          <div class="visit__col stack-4">
-            <h3 class="t-label">Returns</h3>
-            <p>Within 14 days of delivery, unused and in the original packaging. Final-sale items excluded.</p>
-          </div>
-        </div>
+        <a class="tile span-4" id="home-goods" href="https://www.hisnhersllc.com/products/9">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/fall-wreath.jpg" alt="An autumn wreath of leaves and white pumpkins" width="800" height="800" loading="lazy" data-source="client" data-subject="Fall wreath, 20 inch"></div>
+          <div class="tile__head"><h3>Fall wreath, 20 inch</h3><span class="tile__price">$10.00</span></div>
+          <p class="tile__facts">Retail $25.00</p>
+        </a>
+        <a class="tile span-4" href="https://www.hisnhersllc.com/products/8">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/wine-chiller.jpg" alt="A concrete-look wine chiller bucket in its packaging" width="800" height="800" loading="lazy" data-source="client" data-subject="Wine chiller bucket"></div>
+          <div class="tile__head"><h3>Wine chiller bucket</h3><span class="tile__price">$10.00</span></div>
+          <p class="tile__facts">Retail $25.00</p>
+        </a>
+        <a class="tile span-4" href="https://www.hisnhersllc.com/products/7">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/recipe-binder.jpg" alt="A white recipe binder in its box" width="800" height="800" loading="lazy" data-source="client" data-subject="Recipe binder"></div>
+          <div class="tile__head"><h3>Recipe binder</h3><span class="tile__price">$5.00</span></div>
+          <p class="tile__facts">Retail $30.00</p>
+        </a>
+        <a class="tile span-4" id="gadgets" href="https://www.hisnhersllc.com/products/12">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/car-heater.jpg" alt="A 150 W car heater fan in its box" width="800" height="800" loading="lazy" data-source="client" data-subject="Portable car heater"></div>
+          <div class="tile__head"><h3>Portable car heater</h3><span class="tile__price">$5.00</span></div>
+          <p class="tile__facts">Retail $18.00</p>
+        </a>
+        <a class="tile span-4" href="https://www.hisnhersllc.com/products/6">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/karaoke-machine.jpg" alt="A mini wireless karaoke machine in its box" width="800" height="800" loading="lazy" data-source="client" data-subject="Mini karaoke machine"></div>
+          <div class="tile__head"><h3>Mini karaoke machine</h3><span class="tile__price">$5.00</span></div>
+          <p class="tile__facts">Retail $30.00</p>
+        </a>
+        <a class="tile span-4" href="https://www.hisnhersllc.com/products/10">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/bonnyco-light-box.jpg" alt="A pink Bonnyco letter light box in its box" width="800" height="800" loading="lazy" data-source="client" data-subject="Bonnyco light box"></div>
+          <div class="tile__head"><h3>Bonnyco light box</h3><span class="tile__price">$8.00</span></div>
+          <p class="tile__facts">Retail $17.99</p>
+        </a>
+        <a class="tile span-4" id="clothing" href="https://www.hisnhersllc.com/products/13">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/leggings.jpg" alt="Black Crz Yoga leggings in their bag" width="800" height="800" loading="lazy" data-source="client" data-subject="Faux leather leggings, L"></div>
+          <div class="tile__head"><h3>Faux leather leggings, L</h3><span class="tile__price">$5.00</span></div>
+          <p class="tile__facts">Retail $34.99</p>
+        </a>
+        <a class="tile span-4" href="https://www.hisnhersllc.com/products/5">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/kids-gloves.jpg" alt="Blue camouflage kids snow gloves with their tag" width="800" height="800" loading="lazy" data-source="client" data-subject="Kids gloves, age 8 to 10"></div>
+          <div class="tile__head"><h3>Kids gloves, age 8 to 10</h3><span class="tile__price">$5.00</span></div>
+          <p class="tile__facts">Retail $17.99</p>
+        </a>
+        <a class="tile span-4" href="https://www.hisnhersllc.com/products/11">
+          <div class="tile__media" style="--tile-ratio: 1 / 1"><img src="img/cat-bed.jpg" alt="A cat resting in a hammock bed clamped to a table" width="800" height="800" loading="lazy" data-source="client" data-subject="Attachable cat bed"></div>
+          <div class="tile__head"><h3>Attachable cat bed</h3><span class="tile__price">$20.00</span></div>
+          <p class="tile__facts">Retail $44.00</p>
+        </a>
       </div>
     </div>
   </section>
@@ -165,7 +171,7 @@
   <div class="wrap">
     <div class="closing__cta close--word">
       <div class="section-head--split">
-        <div><h2 id="close-h">See what is on the shelves</h2><p class="t-lead">New items go out as each pallet is unpacked.</p></div>
+        <div><h2 id="close-h">See what is on the shelves</h2><p class="t-lead">New items go out as soon as they are checked.</p></div>
         <a class="btn btn--primary" href="#shop">See the stock<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
       <p class="close__word" aria-hidden="true">H&amp;H Outlet</p>
@@ -176,10 +182,11 @@
           <a class="nav__logo" href="#top"><span class="mark" data-mark="stack" aria-hidden="true"></span>H&amp;H Outlet</a>
           <p class="footer__lede">A liquidation store run by His &amp; Hers LLC, selling in store and online.</p>
         </div>
-        <div class="span-2 footer__col"><h3>Shop</h3><ul><li><a href="#home-goods">Home</a></li><li><a href="#gadgets">Gadgets</a></li><li><a href="#clothing">Clothing and pets</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Visit</h3><ul><li><a href="#visit">Opening hours</a></li><li><a href="#how">How the store works</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Online</h3><ul><li><a href="https://www.hisnhersllc.com/products">All items online</a></li><li><a href="https://www.hisnhersllc.com/shipping">Shipping policy</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Follow</h3><ul><li><a href="https://instagram.com/hisnhersllc">Instagram</a></li><li><a href="https://www.facebook.com/share/g/1AYyATQxvK/">Facebook</a></li></ul></div>
+        <div class="span-2 footer__col" id="visit"><h3>Opening hours</h3>
+          <dl class="hours" data-tz="America/New_York" data-assumed><dt data-days="tue-fri">Tue to Fri</dt><dd>10:00&nbsp;to&nbsp;18:00</dd><dt data-days="sat">Sat</dt><dd>10:00&nbsp;to&nbsp;16:00</dd><dt data-days="sun,mon">Sun and Mon</dt><dd>Closed</dd></dl></div>
+        <div class="span-2 footer__col"><h3>Pickup and shipping</h3><p>Free pickup at the store, or shipping by USPS, UPS or FedEx. Free shipping over $150.</p></div>
+        <div class="span-2 footer__col"><h3>Returns</h3><p>Within 14 days of delivery, unused and in the original packaging. Final-sale items excluded.</p></div>
+        <div class="span-2 footer__col"><h3>Follow</h3><ul><li><a href="https://instagram.com/hisnhersllc">Instagram</a></li><li><a href="https://www.facebook.com/share/g/1AYyATQxvK/">Facebook</a></li><li><a href="https://www.hisnhersllc.com/products">All items online</a></li></ul></div>
       </div>
       <div class="footer__legal">
         <span>&copy; 2026 His &amp; Hers LLC</span>
