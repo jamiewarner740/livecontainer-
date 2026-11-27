@@ -1,0 +1,17 @@
+{
+  "name": "H&H Outlet",
+  "short_name": "H&H Outlet",
+  "description": "Everything you need, at the prices you want. New inventory dropping constantly.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

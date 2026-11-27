@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* The original H&H Outlet theme: near-black ground, warm off-white text, one gold accent
+   (taken from the current site's stylesheet: background hsl(0 0% 4%), accent hsl(43 72% 52%)). */
+@theme {
+  --color-ground: #0a0a0a;
+  --color-surface: #141414;
+  --color-raised: #1c1c1c;
+  --color-line: #262626;
+  --color-ink: #f5f3ee;
+  --color-muted: #a8a397;
+  --color-gold: #d6a32b;
+  --color-gold-soft: #f0c75e;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html { background: var(--color-ground); color: var(--color-ink); color-scheme: dark; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-sans); min-height: 100dvh; }
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
