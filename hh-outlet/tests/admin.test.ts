@@ -94,3 +94,57 @@ describe('passwords', () => {
     expect(h).not.toContain('correct');
   });
 });
+
+import { cancelAndRefund, recordStoreSale } from '@/lib/admin/orders';
+import { palletReports, savePallet } from '@/lib/admin/reports';
+import { payOrder } from '@/lib/checkout';
+
+describe('in-store sales', () => {
+  it('records the sale, lowers stock and logs it as a store sale', async () => {
+    const id = await createListing({ ...base, quantity: 3 }, [photo], staff);
+    const sale = await recordStoreSale([{ productId: id, qty: 2 }], 'cash', staff);
+    expect(sale.totalCents).toBe(2 * 4999);
+    expect((await sql`select stock from products where id = ${id}`)[0].stock).toBe(1);
+    expect(await sql`select delta, reason from inventory_events where product_id = ${id} and reason = 'sale_store'`).toEqual([{ delta: -2, reason: 'sale_store' }]);
+    expect((await sql`select channel, status, fulfillment, payment_method from orders where id = ${sale.id}`)[0]).toEqual({ channel: 'store', status: 'paid', fulfillment: 'in_store', payment_method: 'cash' });
+  });
+
+  it('will not sell a unit someone is paying for online', async () => {
+    const id = await createListing({ ...base, quantity: 1 }, [photo], staff);
+    await createOrder({ lines: [{ productId: id, qty: 1 }], customer: { name: 'B', email: 'b@example.com' }, fulfillment: 'pickup' });
+    await expect(recordStoreSale([{ productId: id, qty: 1 }], 'card', staff)).rejects.toThrow(/online checkout/);
+  });
+
+  it('accepts a counter price and audits the difference', async () => {
+    const id = await createListing(base, [photo], staff);
+    const sale = await recordStoreSale([{ productId: id, qty: 1, priceCents: 4000 }], 'cash', staff);
+    expect(sale.totalCents).toBe(4000);
+    const [a] = await sql`select detail from audit_log where action = 'sale.price_override'`;
+    expect(a.detail).toMatchObject({ list: 4999, sold: 4000 });
+  });
+});
+
+describe('refunds', () => {
+  it('refunds a paid web order and puts the stock back', async () => {
+    const id = await createListing({ ...base, quantity: 2 }, [photo], staff);
+    const o = await createOrder({ lines: [{ productId: id, qty: 2 }], customer: { name: 'B', email: 'b@example.com' }, fulfillment: 'pickup' });
+    await payOrder(o.id, o.token, 'test-ok');
+    expect((await sql`select stock from products where id = ${id}`)[0].stock).toBe(0);
+    await cancelAndRefund(o.id, staff, 'changed mind');
+    expect((await sql`select stock from products where id = ${id}`)[0].stock).toBe(2);
+    expect((await sql`select status, fulfillment_status from orders where id = ${o.id}`)[0]).toEqual({ status: 'cancelled', fulfillment_status: 'refunded' });
+    await expect(cancelAndRefund(o.id, staff, 'again')).rejects.toThrow(/Only paid orders/);
+  });
+});
+
+describe('pallet report', () => {
+  it('adds up cost, units and what was sold on each channel', async () => {
+    const pallet = await savePallet(null, { label: 'Test pallet', costCents: 20000, freightCents: 5000, otherCents: 0 }, staff);
+    const a = await createListing({ ...base, quantity: 3, palletId: pallet }, [photo], staff);
+    await createListing({ ...base, name: 'Lamp', priceCents: 1500, retailCents: null, quantity: 2, palletId: pallet }, [photo], staff);
+    await recordStoreSale([{ productId: a, qty: 2 }], 'cash', staff);
+    const [r] = await palletReports(pallet);
+    expect(r).toMatchObject({ total_cost: 25000, items: 2, units_listed: 5, units_sold: 2, units_left: 3, revenue: 9998, sold_store: 2, sold_web: 0 });
+    expect(r.left_value).toBe(4999 + 2 * 1500);
+  });
+});

@@ -164,3 +164,81 @@ export async function assistantAction(form: FormData): Promise<{ draft?: Listing
     return { error: (e as Error).message };
   }
 }
+
+// Counter sales, orders and pallets ------------------------------------------------------------------------------
+
+import { advanceFulfillment, cancelAndRefund, recordStoreSale, SaleError, type FulfillmentStep, type SaleLine } from '@/lib/admin/orders';
+import { savePallet } from '@/lib/admin/reports';
+import { sql } from '@/lib/db';
+import { thumb } from '@/lib/images';
+
+export type SellItem = { id: number; name: string; sku: string | null; price_cents: number; available: number; image: string; location: string | null };
+
+/** Finds items for the counter by SKU label, barcode or name. An exact SKU or barcode comes first. */
+export async function findForSale(query: string): Promise<SellItem[]> {
+  await requireStaff();
+  const q = query.trim();
+  if (!q) return [];
+  const digits = q.replace(/\D/g, '');
+  const like = `%${q.toLowerCase().replace(/[%_\\]/g, '\\$&')}%`;
+  const rows = await sql<SellItem[]>`
+    select p.id, p.name, p.sku, p.price_cents, p.image, p.location,
+           p.stock - coalesce((select sum(r.qty) from reservations r where r.product_id = p.id and r.status = 'active' and r.expires_at > now()), 0)::int as available
+    from products p
+    where p.status <> 'archived' and (upper(p.sku) = ${q.toUpperCase()} ${digits.length >= 8 ? sql`or p.upc = ${digits}` : sql``} or lower(p.name) like ${like})
+    order by (upper(p.sku) = ${q.toUpperCase()}) desc, p.updated_at desc limit 12`;
+  return rows.map((r) => ({ ...r, image: r.image ? thumb(r.image) : '' }));
+}
+
+export async function recordSaleAction(lines: SaleLine[], paymentMethod: 'cash' | 'card' | 'other', note: string): Promise<{ number?: string; totalCents?: number; error?: string }> {
+  const staff = await requireStaff();
+  try {
+    const r = await recordStoreSale(lines, paymentMethod, staff, note || undefined);
+    revalidatePath('/admin');
+    revalidatePath('/');
+    return { number: r.number, totalCents: r.totalCents };
+  } catch (e) {
+    if (e instanceof SaleError) return { error: e.message };
+    throw e;
+  }
+}
+
+export async function fulfillAction(orderId: string, step: FulfillmentStep, _: FormState, form: FormData): Promise<FormState> {
+  const staff = await requireStaff();
+  try {
+    await advanceFulfillment(orderId, step, staff, step === 'shipped' ? { carrier: String(form.get('carrier') ?? ''), number: String(form.get('tracking') ?? '').trim() } : undefined);
+    revalidatePath(`/admin/orders/${orderId}`);
+    return { ok: true, message: 'Updated.' };
+  } catch (e) {
+    return { message: (e as Error).message };
+  }
+}
+
+export async function refundAction(orderId: string, _: FormState, form: FormData): Promise<FormState> {
+  const staff = await requireStaff('owner');
+  if (form.get('confirm') !== 'yes') return { message: 'Tick the box to confirm the refund.' };
+  try {
+    await cancelAndRefund(orderId, staff, String(form.get('reason') ?? '').trim() || 'Refunded by store');
+    revalidatePath(`/admin/orders/${orderId}`);
+    return { ok: true, message: 'Refunded and items returned to stock.' };
+  } catch (e) {
+    return { message: (e as Error).message };
+  }
+}
+
+export async function savePalletAction(id: number | null, _: FormState, form: FormData): Promise<FormState> {
+  const staff = await requireStaff();
+  const c = (k: string) => cents(form.get(k)) ?? 0;
+  try {
+    const saved = await savePallet(id, {
+      label: String(form.get('label') ?? ''), supplier: text(form.get('supplier')), purchasedOn: text(form.get('purchasedOn')),
+      costCents: c('cost'), freightCents: c('freight'), otherCents: c('other'), manifestRetailCents: cents(form.get('manifestRetail')), notes: text(form.get('notes')),
+    }, staff);
+    revalidatePath('/admin/pallets');
+    if (!id) redirect(`/admin/pallets/${saved}`);
+    return { ok: true, message: 'Saved.' };
+  } catch (e) {
+    if ((e as { digest?: string }).digest?.startsWith('NEXT_REDIRECT')) throw e;
+    return { message: (e as Error).message };
+  }
+}

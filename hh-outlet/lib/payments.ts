@@ -87,3 +87,26 @@ function friendlyDecline(code?: string) {
     default: return null;
   }
 }
+
+/**
+ * Refunds a payment in full or in part. The idempotency key makes a retried refund safe: Square returns the same
+ * refund instead of sending the money twice.
+ */
+export async function refundPayment(provider: string | null, paymentId: string, amountCents: number, idempotencyKey: string, reason: string): Promise<{ ok: true } | { ok: false; error: string }> {
+  if (provider === 'test') return { ok: true };
+  if (provider !== 'square') return { ok: false, error: 'This order was not paid online, so there is nothing to refund here.' };
+  const sq = squareEnv();
+  if (!sq) return { ok: false, error: 'Square is not connected, so the refund could not be sent. Refund it in the Square dashboard.' };
+  try {
+    const res = await fetch(`${sq.api}/v2/refunds`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${sq.token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ idempotency_key: idempotencyKey.slice(0, 45), payment_id: paymentId, amount_money: { amount: amountCents, currency: 'USD' }, reason: reason.slice(0, 192) }),
+    });
+    const body = (await res.json().catch(() => ({}))) as { refund?: { status: string }; errors?: { detail?: string }[] };
+    if (res.ok && body.refund && body.refund.status !== 'REJECTED' && body.refund.status !== 'FAILED') return { ok: true };
+    return { ok: false, error: `Square did not accept the refund${body.errors?.[0]?.detail ? `: ${body.errors[0].detail}` : ''}.` };
+  } catch {
+    return { ok: false, error: 'Square could not be reached. Nothing was refunded; try again.' };
+  }
+}
