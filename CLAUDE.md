@@ -10,5 +10,5 @@ Before working on the rebuild, read:
 - `docs/rebuild/current-site/`: current product data, manifest and original logo
 - `docs/rebuild/screenshots/`: how the current site looks
 
-Design skill: `.claude/skills/design-taste-frontend` (tasteskill). Use it for the storefront design.
-Override for this project: the skill's house rule 9 hides street numbers, phones and real contacts. For this site, use the store's real address, phone and email from `BRIEF.md`, because local customers need them.
+Storefront: `hh-outlet/` is a Next.js app in the original site's black and gold theme (near-black #0a0a0a, gold #d6a32b, Playfair Display headings, Inter text). It is product-first: items show on the first phone screen. The owner chose this over the taste skill's one-section-per-screen layout, so don't apply that skill's page-layout rules or gate to the store.
+Use the store's real address, phone and email from `BRIEF.md` once given; never invent hours, contacts or product conditions.
