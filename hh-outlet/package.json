@@ -12,7 +12,8 @@
     "db:seed": "tsx --env-file=.env.local scripts/seed.ts",
     "db:setup": "npm run db:migrate && npm run db:seed",
     "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts",
-    "staff:create": "tsx --env-file=.env.local scripts/create-staff.ts"
+    "staff:create": "tsx --env-file=.env.local scripts/create-staff.ts",
+    "worker": "tsx --env-file=.env.local scripts/worker.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.14.0",

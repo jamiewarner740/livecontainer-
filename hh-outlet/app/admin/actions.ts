@@ -242,3 +242,67 @@ export async function savePalletAction(id: number | null, _: FormState, form: Fo
     return { message: (e as Error).message };
   }
 }
+
+// eBay -------------------------------------------------------------------------------------------------------------
+
+import { disconnect as ebayDisconnect } from '@/lib/ebay/client';
+import { importListings, saveLocation } from '@/lib/ebay/sync';
+import { retryJob, enqueue } from '@/lib/jobs';
+
+export async function saveEbaySettingsAction(_: FormState, form: FormData): Promise<FormState> {
+  const staff = await requireStaff('owner');
+  try {
+    const bps = Math.round(Number(form.get('markupPercent') || 0) * 100);
+    if (!Number.isFinite(bps) || bps < 0 || bps > 10000) return { message: 'Use a markup from 0 to 100%.' };
+    await sql`update ebay_account set fulfillment_policy_id = ${text(form.get('fulfillment'))}, payment_policy_id = ${text(form.get('payment'))},
+              return_policy_id = ${text(form.get('returns'))}, markup_bps = ${bps}, markup_cents = ${cents(form.get('markupDollars')) ?? 0},
+              auto_list = ${form.get('autoList') === 'on'} where id = 1`;
+    const postal = text(form.get('postal')), city = text(form.get('city')), state = text(form.get('state'));
+    if (postal && city && state) await saveLocation(postal, city, state.toUpperCase());
+    await audit(staff.id, 'ebay.settings', 'ebay', '1', { bps, autoList: form.get('autoList') === 'on' });
+    revalidatePath('/admin/ebay');
+    return { ok: true, message: 'eBay settings saved.' };
+  } catch (e) {
+    return { message: (e as Error).message };
+  }
+}
+
+export async function disconnectEbayAction() {
+  const staff = await requireStaff('owner');
+  await ebayDisconnect();
+  await audit(staff.id, 'ebay.disconnect', 'ebay', '1');
+  revalidatePath('/admin/ebay');
+}
+
+export async function retryJobAction(id: number) {
+  await requireStaff();
+  await retryJob(id);
+  revalidatePath('/admin/ebay');
+}
+
+export async function republishAction(productId: number) {
+  await requireStaff();
+  await enqueue('ebay.publish', { productId }, { dedupeKey: `ebay.publish:${productId}` });
+  revalidatePath('/admin/ebay');
+}
+
+export async function resolveOversellAction(id: number) {
+  const staff = await requireStaff();
+  await sql`update oversells set resolved = true where id = ${id}`;
+  await audit(staff.id, 'ebay.oversell_resolved', 'oversell', String(id));
+  revalidatePath('/admin/ebay');
+}
+
+export async function importEbayAction(_: FormState, form: FormData): Promise<FormState> {
+  const staff = await requireStaff('owner');
+  const ids = String(form.get('listingIds') ?? '').split(/[\s,]+/).map((s) => s.trim()).filter((s) => /^\d{9,15}$/.test(s)).slice(0, 100);
+  if (!ids.length) return { message: 'Paste eBay item numbers (the long number on each listing), separated by spaces or new lines.' };
+  try {
+    const r = await importListings(ids);
+    await audit(staff.id, 'ebay.import', 'ebay', '1', { count: ids.length, ok: r.filter((x) => x.ok).length });
+    revalidatePath('/admin/products');
+    return { ok: true, message: r.map((x) => `${x.listingId}: ${x.message}`).join('\n') };
+  } catch (e) {
+    return { message: (e as Error).message };
+  }
+}

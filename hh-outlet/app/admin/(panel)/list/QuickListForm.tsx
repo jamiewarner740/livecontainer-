@@ -13,7 +13,7 @@ import { Chips, ErrorText, Field, inputCls } from '../ui';
 type Sticky = { category?: string; location?: string; palletId?: string };
 const STICKY_KEY = 'hh-quicklist-defaults';
 
-export function QuickListForm({ pallets, locations, assistant, ebayConnected }: { pallets: { id: number; label: string }[]; locations: string[]; assistant: boolean; ebayConnected: boolean }) {
+export function QuickListForm({ pallets, locations, assistant, ebayConnected, ebayDefault }: { pallets: { id: number; label: string }[]; locations: string[]; assistant: boolean; ebayConnected: boolean; ebayDefault: boolean }) {
   const formRef = useRef<HTMLFormElement>(null);
   const [photos, setPhotos] = useState<{ file: File; url: string }[]>([]);
   const [state, setState] = useState<FormState>({});
@@ -23,7 +23,8 @@ export function QuickListForm({ pallets, locations, assistant, ebayConnected }: 
   const [assistBusy, setAssistBusy] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(null);
   const [lastSeconds, setLastSeconds] = useState<number | null>(null);
-  const [v, setV] = useState<Record<string, string>>({ quantity: '1' });
+  const fresh = (): Record<string, string> => ({ quantity: '1', ...(ebayDefault ? { sellOnEbay: 'on' } : {}) });
+  const [v, setV] = useState<Record<string, string>>(fresh);
   const set = (k: string, val: string) => {
     setV((s) => ({ ...s, [k]: val }));
     // A corrected field drops its error at once instead of waiting for the next submit.
@@ -90,7 +91,7 @@ export function QuickListForm({ pallets, locations, assistant, ebayConnected }: 
         try { localStorage.setItem(STICKY_KEY, JSON.stringify(sticky)); } catch {}
         photos.forEach((p) => URL.revokeObjectURL(p.url));
         setPhotos([]); setLookup(null); setStartedAt(null);
-        setV({ quantity: '1', ...sticky });
+        setV({ ...fresh(), ...sticky });
         window.scrollTo({ top: 0 });
       } else window.scrollTo({ top: 0, behavior: 'smooth' });
     });

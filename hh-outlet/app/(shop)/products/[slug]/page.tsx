@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
+import { sql } from '@/lib/db';
 import { ProductGrid } from '@/components/ProductCard';
 import { getProduct, recordEvent, relatedProducts, savings } from '@/lib/products';
 import { packagingLabels, testedLabels } from '@/lib/conditions';
@@ -17,7 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const p = await getProduct((await params).slug);
+  const slug = (await params).slug;
+  // Links from the old site (/products/13) keep working: send them to the item's new address.
+  if (/^\d+$/.test(slug)) {
+    const [old] = await sql<{ slug: string }[]>`select slug from products where id = ${Number(slug)}`;
+    if (old) permanentRedirect(`/products/${old.slug}`);
+  }
+  const p = await getProduct(slug);
   if (!p) notFound();
   const s = savings(p);
   const cat = getCategory(p.category);
